@@ -215,3 +215,7 @@
  rrrrrrrrrrrrrrrc
 2025-09-19 18:16:14 /Users/jacobmilham/Programing/game project/platformer.p8
  rcmmmmmmmgm.....mccc.cgccrrrrrrrrrr
+2025-09-19 19:06:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-19 19:15:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrigggggggggggggggggggggggggggggggggrrrrrrcggg
