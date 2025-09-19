@@ -1,157 +1,20 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
---mr duck man!!
-function _init()
+
+function _init() do 
     player = {
-        x = 0,--left
-        y = 8,--top
-        dx = 0,--movement on the x axis
-        dy = 1, --movement on the y axis
-        max_dx = 2,
-        max_dy = 8,
-        falling = true,
-        can_jump = true,
-        facing_left = false,
-        runing_sprite_1 = false,
-        current_sprite = 1,
-        camera = {
-            x = 0,
-            y = 0
-        }
+        x = 8,
+        y = 8
     }
-    update_animations = true --will halve the frame rate 
 end
 
-function _update()
-    if player.can_jump and (btn(❎) or btn(⬆️)) then
-        jump()
-    else
-        if player.dy>0 then
-            player.falling = true
-            player.dy = 1
-        end
-    end
+function _update() do
 
-    if player.falling then
-        player.y += player.dy
-    else
-        player.y -= player.dy
-    end
-
-
-    if btn(⬅️) then
-        move(true)
-    elseif btn(➡️) then
-        move(false)
-    else
-        player.dx -=.1
-        if (player.dx < 0) player.dx = 0
-    end
-
-    if player.facing_left then
-        player.x -= player.dx
-    else
-        player.x += player.dx
-    end
-
-    handle_map_collision()
 end
 
-function _draw()
-    cls()
-    move_camera()
-    camera(player.camera.x, player.camera.y)
-    mapdraw(0,0,0,0,16,16)
-
-
-    spr(player.current_sprite,player.x,player.y,1,1,player.facing_left,player.falling)
-    if update_animations then
-        update_player_sprite()
-    end
-    update_animations = not update_animations
-end
-
--->8
---graphics
-function update_player_sprite()
-    if player.dx >0 then 
-        player.runing_sprite_1 = not player.runing_sprite_1
-        if player.runing_sprite_1 then
-            player.current_sprite = 3
-        else
-            player.current_sprite = 2
-        end
-    else
-        player.current_sprite = 1
-    end
-end
-
-function move_camera()
-    screen_size = 128
-    player.camera.x = player.x - screen_size/2
-    player.camera.y = 0
-
-    if (player.camera.x < 0) player.camera.x = 0
-end
-
--->8
---movement
-function move(left)
-    --has the player move left or right
-    if left then
-        player.facing_left = true
-    else
-        player.facing_left = false
-    end
-    player.dx += .1
-    if player.dx > player.max_dx then
-        player.dx = player.max_dx
-    end
-    
-end
-
-function jump()
-    --has the player jump
-    if not player.falling then
-        player.dy += 1
-        if player.dy > player.max_dy then
-            player.falling = true
-            player.can_jump = false
-        end
-    end 
-end
-
-function handle_map_collision()
-    --handles the player colliding with the map
-    x = player.x/8 --divides by 8 to get the position of the player relative to the map
-    y = player.y/8 -- a map square is an 8x8 square of pixels
-    if player.facing_left then
-        x = flr(x)
-    else
-        x = ceil(x)
-    end
-    if player.falling then
-        y = ceil(y)
-    else
-        y = flr(y)
-    end
-    if fget(mget(x,y),1) then
-        if player.dx> 0 then
-            player.dx = 0
-            if player.facing_left then
-                player.x = (x+1)*8
-            else 
-                player.x = (x-1)*8
-            end
-        elseif player.falling then
-            player.can_jump = true
-            player.falling = false
-            player.dy = 0
-            player.y = (y-1)*8
-        end
-
-    end
+function _draw() do 
+    spr(1,player[x],player[y],1,1,false,false)
 end
 __gfx__
 00000000000003000000030000000300c11c11c133bb3bb3444444446655555600077750b333333b000000000000000000000000000000000000000000000000
