@@ -7,7 +7,7 @@ __lua__
 function _init()
     players = {}
     add(players,make_player(0))
-    add(players,make_player(1))
+    --add(players,make_player(1))
     music(0,0,12)
 end
 
@@ -18,12 +18,13 @@ end
 function _draw()
     cls()
     
-    sspr(0,32,40,16,0,0,160,64)
+    sspr(0,32,40,16,0,9,160,64)
     draw(players[1],true)
+    
     for player=2,#players do
         draw(players[player])
     end
-
+    
 end
 
 -->8
@@ -45,6 +46,7 @@ function make_player(player_num)
         current_sprite = 1,
         map_width = 127,
         map_height = 16,
+        bread_collected = 0,
         alive = true,
         update_animations = true, --will halve the frame rate
         cam = {
@@ -81,14 +83,14 @@ function draw(self,draw_map)
     draw_map = draw_map or false
     if self.alive then
         if draw_map then
-            pal()
+            draw_ui(self)
             move_cam(self)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
-        else
-            pal(3,7+self.player_num)
         end
+        pal(3,3+self.player_num)
         spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
+        pal()
         if self.update_animations then
             update_sprite(self)
         end
@@ -98,6 +100,16 @@ function draw(self,draw_map)
         print(self.player_num,self.cam.x + 26,self.cam.y,8)
         print("died",self.cam.x+32,self.cam.y,8)
     end
+end
+
+function draw_ui(self)
+    local cam = self.cam
+    camera()
+    rectfill(0,0,127,9,8)
+    spr(33)
+    print(self.bread_collected,8,0,7)
+    camera(cam.x,cam.y)
+
 end
 -->8
 --movement
@@ -159,6 +171,7 @@ function handle_map_collision(self)
     elseif fget(mget(x,y),3) then 
         mset(x,y,0)
         sfx(0)
+        self.bread_collected += 1
     end
 
 end
