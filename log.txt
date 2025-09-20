@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 126 // number of times program has been run
+[000000]     11 sessions 193 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -54,56 +54,49 @@
 [000000]     49 accept_future 0
 [000000]   
 [000000]   codo_system_init
-[000517]   Compiled against SDL version: 2.28.5
-[000517]   Linked against SDL version:   2.28.5
-[000517]   Current video driver: cocoa
-[000517]   codo_reset_timer
-[000517]   codo_gui_init
-[000517]   codo_keys_init
-[000517]   codo_text_init
-[000517]   codo_video_init
-[000517]   codo_mouse_init
-[000517]   codo_joystick_init
-[000517]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
-[000518]   searching for joysticks
-[000518]     found 0 joysticks
-[000518]   ok
-[000518] ok
-[000526] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000527] codo_set_screen 128 128 8 100
-[000527]  window size: 640 540
-[000561]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000520]   Compiled against SDL version: 2.28.5
+[000520]   Linked against SDL version:   2.28.5
+[000520]   Current video driver: cocoa
+[000520]   codo_reset_timer
+[000520]   codo_gui_init
+[000520]   codo_keys_init
+[000520]   codo_text_init
+[000520]   codo_video_init
+[000520]   codo_mouse_init
+[000520]   codo_joystick_init
+[000521]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
+[000521]   searching for joysticks
+[000521]     found 0 joysticks
+[000521]   ok
+[000521] ok
+[000530] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000531] codo_set_screen 128 128 8 100
+[000531]  window size: 640 540
+[000574]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000562]  desktop size: 1440 900
-[000562] ok
-[000566] codo_sound_init mix_buffer_size: 1024
-[000566] codo_sound_init
-[000566] SDL_INIT_AUDIO ok
-[000625] SDL_OpenAudio ok
-[000625]  freq:22050
+[000576]  desktop size: 1440 900
+[000576] ok
+[000581] codo_sound_init mix_buffer_size: 1024
+[000581] codo_sound_init
+[000581] SDL_INIT_AUDIO ok
+[000613] SDL_OpenAudio ok
+[000613]  freq:22050
  channels:1
-[000625] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[000625] Current audio driver: coreaudio
-[002654] loading /Users/jacobmilham/Programing/game project/platformer.p8
-[004331] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[023235] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[108966] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[166665] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[174958] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[211945] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[223536] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[241567] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[258338] window closed (14)
-[258339] codo_exit
-[258339]   cmusic_stop
-[258339]   codo_main_exit
-[258339]   codo_config_save
-[258340]   codo_sound_exit
-[258340]   codo_video_exit
-[258354]   codo_joystick_exit
-[258354]   codo_system_exit
-[258354]   codo_items_created: 1305
-[258354] ok
+[000613] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000613] Current audio driver: coreaudio
+[002645] loading /Users/jacobmilham/Programing/game project/platformer.p8
+[004319] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[039071] window closed (14)
+[039071] codo_exit
+[039071]   cmusic_stop
+[039071]   codo_main_exit
+[039072]   codo_config_save
+[039073]   codo_sound_exit
+[039073]   codo_video_exit
+[039081]   codo_joystick_exit
+[039081]   codo_system_exit
+[039081]   codo_items_created: 1304
+[039081] ok

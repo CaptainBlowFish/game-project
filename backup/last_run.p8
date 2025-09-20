@@ -3,7 +3,31 @@ version 43
 __lua__
 --mr duck man!!
 function _init()
+    players = {}
+    add(players,make_player(0))
+    add(players,make_player(1))
+end
+
+function _update()
+    foreach(players,update)
+end
+
+function _draw()
+    cls()
+    sspr(0,32,40,16,0,0,160,64)
+    foreach(players,draw)
+    
+    
+    
+    
+end
+
+-->8
+--player
+
+function make_player(player_num)
     player = {
+        player_num = player_num,
         x = 10,--left
         y = 80,--top
         dx = 0,--movement on the x axis
@@ -19,155 +43,167 @@ function _init()
         map_width = 127,
         map_height = 16,
         alive = true,
+        update_animations = true, --will halve the frame rate
         cam = {
             x = 0,
             y = 0
         }
     }
-    update_animations = true --will halve the frame rate 
+    return player
 end
-
-function _update()
-    if player.can_jump and (btn(❎) or btn(⬆️)) then
-        jump()
-    else
-        if player.dy>0 then
-            player.falling = true
-            player.dy = 1
-        elseif player.facing_left then
-            if not fget(mget(ceil((player.x+5)/8),flr(player.y/8)+1),1) and not player.falling then
-                player.falling = true
-                player.dy  = player.fall_speed
-            end
-        elseif not player.facing_left then
-            if not fget(mget(ceil((player.x+1)/8),flr(player.y/8)+1),1) and not player.falling then
-                player.falling = true
-                player.dy  = player.fall_speed
-            end
-        end
-    end
-
-    if player.falling then
-        player.y += player.dy
-    else
-        player.y -= player.dy
-    end
-
-
-    if btn(⬅️) then
-        move(true)
-    elseif btn(➡️) then
-        move(false)
-    else
-        player.dx -= .1
-        if (player.dx < 0) player.dx = 0
-    end
-
-    if player.facing_left then
-        player.x -= player.dx
-    else
-        player.x += player.dx
-    end
-
-    handle_map_collision()
-end
-
-function _draw()
-    cls(12)
-    
-    move_cam()
-    camera(player.cam.x, player.cam.y)
-    mapdraw(1,0,0,0,player.map_width,player.map_height)
-    sspr(0,32,40,16,0,0,160,64)
-    spr(player.current_sprite,player.x,player.y,1,1,player.facing_left,player.falling)
-    if update_animations then
-        update_player_sprite()
-    end
-    update_animations = not update_animations
-end
-
 -->8
 --graphics
-function update_player_sprite()
-    if player.dx >0 then 
-        player.runing_sprite_1 = not player.runing_sprite_1
-        if player.runing_sprite_1 then
-            player.current_sprite = 3
+function update_sprite(self)
+    if self.dx >0 then 
+        self.runing_sprite_1 = not self.runing_sprite_1
+        if self.runing_sprite_1 then
+            self.current_sprite = 3
         else
-            player.current_sprite = 2
+            self.current_sprite = 2
         end
     else
-        player.current_sprite = 1
+        self.current_sprite = 1
     end
 end
 
-function move_cam()
+function move_cam(self)
     screen_size = 128
-    player.cam.x = player.x - screen_size/2
-    player.cam.y = 0
+    self.cam.x = self.x - screen_size/2
+    self.cam.y = 0
 
-    if (player.cam.x < 0) player.cam.x = 0
+    if (self.cam.x < 0) self.cam.x = 0
 end
 
+function draw(self)
+    if self.alive then
+        if self.player_num == 0 then
+            pal()
+            move_cam(self)
+            camera(self.cam.x, self.cam.y)
+            mapdraw(1,0,0,0,self.map_width,self.map_height)
+        else
+            pal(3,7+self.player_num)
+        end
+        spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
+        if self.update_animations then
+            update_sprite(self)
+        end
+        self.update_animations = not self.update_animations
+    else
+        print("player",self.cam.x,self.cam.y,8)
+        print(self.player_num,self.cam.x + 26,self.cam.y,8)
+        print("died",self.cam.x+32,self.cam.y,8)
+    end
+end
 -->8
 --movement
-function move(left)
+function move(self, left)
     --has the player move left or right
     if left then
-        player.facing_left = true
+        self.facing_left = true
     else
-        player.facing_left = false
+        self.facing_left = false
     end
-    player.dx += .1
-    if player.dx > player.max_dx then
-        player.dx = player.max_dx
+    self.dx += .1
+    if self.dx > self.max_dx then
+        self.dx = self.max_dx
     end
 
 end
 
-function jump()
+function jump(self)
     --has the player jump
-    if not player.falling then
-        player.dy += .5
-        if player.dy > player.max_dy then
-            player.falling = true
-            player.can_jump = false
+    if not self.falling then
+        self.dy += .5
+        if self.dy > self.max_dy then
+            self.falling = true
+            self.can_jump = false
         end
     end 
 end
 
-function handle_map_collision()
+function handle_map_collision(self)
     --handles the player colliding with the map
-    x = player.x/8 --divides by 8 to get the position of the player relative to the map
-    y = player.y/8 -- a map square is an 8x8 square of pixels
-    if player.facing_left then
+    x = self.x/8 --divides by 8 to get the position of the player relative to the map
+    y = self.y/8 -- a map square is an 8x8 square of pixels
+    if self.facing_left then
         x = ceil(x)
     else
         x = ceil(x)+1
     end
-    if player.falling then
+    if self.falling then
         y = ceil(y)
     else
         y = flr(y)
     end
     if fget(mget(x,y),1) then --flag 1 is for walkable land
-        if player.falling then
-            player.can_jump = true
-            player.falling = false
-            player.dy = 0
-            player.y = (y-1)*8
-        elseif player.dx> 0 then
-            player.dx = 0
-            if player.facing_left then
-                player.x = (x)*8
+        if self.falling then
+            self.can_jump = true
+            self.falling = false
+            self.dy = 0
+            self.y = (y-1)*8
+        elseif self.dx> 0 then
+            self.dx = 0
+            if self.facing_left then
+                self.x = (x)*8
             else 
-                player.x = (x-2)*8
+                self.x = (x-2)*8
             end
         end
     elseif fget(mget(x,y),2) then
-
+        self.alive = false
     end
 end
+
+function update(self)
+    ?self
+    if self.can_jump and (btn(❎,self.player_num) or btn(⬆️,self.player_num)) then
+        jump(self)
+    else
+        if self.dy>0 then
+            self.falling = true
+            self.dy = 1
+        elseif self.facing_left then
+            if not fget(mget(ceil((self.x+5)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
+        elseif not self.facing_left then
+            if not fget(mget(ceil((self.x+1)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
+        end
+    end
+
+    if self.falling then
+        self.y += self.dy
+    else
+        self.y -= self.dy
+    end
+
+
+    if btn(0,self.player_num) then
+        
+        move(self, true)
+
+    elseif btn(1,self.player_num) then
+        move(self, false)
+    else
+        self.dx -= .1
+        if (self.dx < 0) self.dx = 0
+    end
+
+    if self.facing_left then
+        self.x -= self.dx
+    else
+        self.x += self.dx
+    end
+
+    handle_map_collision(self)
+end
+
+
 
 __gfx__
 00000000000003000000030000000300c11c11c133bb3bb3444444446655555600077750b333333b000000000000000000000000000000000000000000000000
