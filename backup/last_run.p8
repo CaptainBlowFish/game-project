@@ -7,7 +7,6 @@ __lua__
 function _init()
     players = {}
     add(players,make_player(0))
-    --add(players,make_player(1))
     music(0,0,12)
 
 end
@@ -70,7 +69,7 @@ function update_sprite(self)
     else
         self.current_sprite = 1
     end
-    if (self.egg) self.current_sprite+=33
+    if (self.egg) self.current_sprite+=33 --34 is the first egg sprite 
 end
 
 function move_cam(self)
@@ -174,7 +173,7 @@ function handle_map_collision(self)
         mset(x,y,0)
         sfx(0)
         self.bread_collected += 1
-        if self.bread_collected ==3 then
+        if self.bread_collected %3==0 then
             add(players,make_player(1,true,self.x,self.y))
         end
     end
