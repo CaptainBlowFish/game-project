@@ -462,3 +462,42 @@
  iiicccccrrrrrcc....cc.........
 2025-09-20 05:20:45 /Users/jacobmilham/Programing/game project/platformer.p8
  rrr
+2025-09-20 05:25:47 /Users/jacobmilham/Programing/game project/backup/20250920_042215_platformer.p8
+ rrrrrrrrrrrrr
+2025-09-20 11:50:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 11:52:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 11:52:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ r________rrrrrr
+2025-09-20 11:53:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rgggg.gggggggggrrrrrrgmmmmmmmrrrrrrr_m
+2025-09-20 11:57:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ ic..
+2025-09-20 11:57:24 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrcggrrstssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssi....
+ 
+2025-09-20 12:02:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ isccc.........rrrrrr
+2025-09-20 12:03:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcsttttsssssssssssssssssssssssss.sssss.ssssssss.ssssssssss.sssssssssssssssssssss
+ ssssssssss.ssssssssssssssssss....ssssssssssssssssssssssssssssssssssssssss.ssssss
+ ssss.sssssssss..cccccc
+2025-09-20 12:13:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrciii..itttt..
+2025-09-20 12:14:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:17:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:17:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrctsssssssssssssctttttt.....iiii.....i.........
+2025-09-20 12:17:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr______r__
+2025-09-20 12:18:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:19:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_rttssssssssssssssrsrr________
+2025-09-20 12:19:06 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr___r__r____
+2025-09-20 12:19:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr_________ctttrrrrrt...tt
