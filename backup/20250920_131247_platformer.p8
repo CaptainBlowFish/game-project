@@ -9,7 +9,8 @@ function _init()
     add(players,make_player(0))
     --add(players,make_player(1))
     music(0,0,12)
-
+    eggs = {}
+    
 end
 
 function _update()
@@ -29,12 +30,11 @@ end
 
 -->8
 --player
-function make_player(player_num,egg,x,y)
+function make_player(player_num)
     player = {
-        egg=egg or false,
         player_num = player_num,
-        x = x or 10,--left
-        y = y or 80,--top
+        x = 10,--left
+        y = 80,--top
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
         max_dx = 2,
@@ -70,7 +70,6 @@ function update_sprite(self)
     else
         self.current_sprite = 1
     end
-    if (self.egg) self.current_sprite+=33 --34 is the first egg sprite 
 end
 
 function move_cam(self)
@@ -174,9 +173,6 @@ function handle_map_collision(self)
         mset(x,y,0)
         sfx(0)
         self.bread_collected += 1
-        if self.bread_collected ==3 then
-            add(players,make_player(1,true,self.x,self.y))
-        end
     end
 
 end
