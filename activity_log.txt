@@ -567,3 +567,9 @@
  rrrrrrrrrrrrrrrr
 2025-09-20 13:20:43 /Users/jacobmilham/Programing/game project/platformer.p8
  rrrrrr
+2025-09-20 13:22:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-20 13:26:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-20 13:42:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr________rrrrrrrrrrrr__rrr______

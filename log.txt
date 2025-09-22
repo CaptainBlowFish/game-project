@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 260 // number of times program has been run
+[000000]     11 sessions 263 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -54,50 +54,96 @@
 [000000]     49 accept_future 0
 [000000]   
 [000000]   codo_system_init
-[000500]   Compiled against SDL version: 2.28.5
-[000500]   Linked against SDL version:   2.28.5
-[000500]   Current video driver: cocoa
-[000501]   codo_reset_timer
-[000501]   codo_gui_init
-[000501]   codo_keys_init
-[000501]   codo_text_init
-[000501]   codo_video_init
-[000501]   codo_mouse_init
-[000501]   codo_joystick_init
-[000502]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
-[000502]   searching for joysticks
-[000502]     found 0 joysticks
-[000502]   ok
-[000502] ok
-[000513] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000514] codo_set_screen 128 128 8 100
-[000514]  window size: 640 540
-[000555]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000747]   Compiled against SDL version: 2.28.5
+[000747]   Linked against SDL version:   2.28.5
+[000747]   Current video driver: cocoa
+[000748]   codo_reset_timer
+[000748]   codo_gui_init
+[000748]   codo_keys_init
+[000748]   codo_text_init
+[000748]   codo_video_init
+[000748]   codo_mouse_init
+[000748]   codo_joystick_init
+[000749]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
+[000749]   searching for joysticks
+[000749]     found 0 joysticks
+[000749]   ok
+[000749] ok
+[000758] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000759] codo_set_screen 128 128 8 100
+[000759]  window size: 640 540
+[000817]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000557]  desktop size: 1440 900
-[000557] ok
-[000562] codo_sound_init mix_buffer_size: 1024
-[000562] codo_sound_init
-[000562] SDL_INIT_AUDIO ok
-[000596] SDL_OpenAudio ok
-[000596]  freq:22050
+[000819]  desktop size: 1440 900
+[000819] ok
+[000827] codo_sound_init mix_buffer_size: 1024
+[000827] codo_sound_init
+[000827] SDL_INIT_AUDIO ok
+[000908] SDL_OpenAudio ok
+[000908]  freq:22050
  channels:1
-[000596] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[000596] Current audio driver: coreaudio
-[002624] loading /Users/jacobmilham/Programing/game project/platformer.p8
-[004298] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[019059] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
-[021831] window closed (14)
-[021831] codo_exit
-[021831]   cmusic_stop
-[021831]   codo_main_exit
-[021833]   codo_config_save
-[021833]   codo_sound_exit
-[021833]   codo_video_exit
-[021840]   codo_joystick_exit
-[021840]   codo_system_exit
-[021840]   codo_items_created: 1304
-[021840] ok
+[000908] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000908] Current audio driver: coreaudio
+[002989] loading /Users/jacobmilham/Programing/game project/platformer.p8
+[004665] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[024542] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[052321] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[053054] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[053653] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[054355] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[055091] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[055823] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[056359] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[056928] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[057660] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[058195] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[058731] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[059465] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[060198] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[061001] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[061566] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[062137] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[062669] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[063637] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[064206] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[064739] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[065574] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[066242] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[066843] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[067476] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[068146] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[068811] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[069381] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[070683] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[071918] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[073121] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[074354] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[075523] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[076659] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[077191] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[077728] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[078259] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[078795] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[079329] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[079862] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[080400] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[080932] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[081463] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[082001] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[082534] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[083069] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[083604] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[120396] window closed (14)
+[120398] codo_exit
+[120398]   cmusic_stop
+[120398]   codo_main_exit
+[120399]   codo_config_save
+[120400]   codo_sound_exit
+[120400]   codo_video_exit
+[120415]   codo_joystick_exit
+[120415]   codo_system_exit
+[120415]   codo_items_created: 1303
+[120415] ok
