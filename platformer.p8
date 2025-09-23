@@ -6,6 +6,7 @@ __lua__
 
 function _init()
     players = {}
+    eggs = {}
     add(players,make_player(0))
     music(0,0,12)
 
@@ -13,24 +14,23 @@ end
 
 function _update()
     foreach(players,update_player)
+    foreach(eggs,update_nonhostile)
 end
 
 function _draw()
     cls()
     sspr(0,32,40,16,0,9,160,64)
     draw(players[1],true)
-    
     for player=2,#players do
         draw(players[player])
     end
-    
+    foreach(eggs, draw)    
 end
 
 -->8
 --player
 function make_player(player_num,egg,x,y)
     player = {
-        egg=egg or false,
         player_num = player_num,
         x = x or 10,--left
         y = y or 80,--top
@@ -56,6 +56,34 @@ function make_player(player_num,egg,x,y)
     }
     return player
 end
+function make_nonHostile(egg,x,y)
+    player = {
+        egg=egg or false,
+        x = x or 10,--left
+        y = y or 80,--top
+        dx = 0,--movement on the x axis
+        dy = 1, --movement on the y axis
+        max_dx = .5,
+        max_dy = 4,
+        fall_speed = .2,
+        falling = true,
+        can_jump = true,
+        facing_left = false,
+        runing_sprite_1 = false,
+        current_sprite = 1,
+        map_width = 127,
+        map_height = 16,
+        bread_collected = 0,
+        alive = true,
+        update_animations = true, --will halve the frame rate
+        cam = {
+            x = 0,
+            y = 0
+        }
+    }
+    return player
+end
+
 -->8
 --graphics
 function update_sprite(self)
@@ -82,6 +110,7 @@ end
 
 function draw(self,draw_map)
     draw_map = draw_map or false
+    player_num = self.player_num or 0
     if self.alive then
         if draw_map then
             draw_ui(self)
@@ -89,7 +118,7 @@ function draw(self,draw_map)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
         end
-        pal(3,3+self.player_num)
+        pal(3,3+player_num)
         spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
         pal()
         if self.update_animations then
@@ -98,7 +127,7 @@ function draw(self,draw_map)
         self.update_animations = not self.update_animations
     else
         print("player",self.cam.x,self.cam.y,8)
-        print(self.player_num,self.cam.x + 26,self.cam.y,8)
+        print(player_num,self.cam.x + 26,self.cam.y,8)
         print("died",self.cam.x+32,self.cam.y,8)
     end
 end
@@ -174,7 +203,7 @@ function handle_map_collision(self)
         sfx(0)
         self.bread_collected += 1
         if self.bread_collected %3==0 then
-            add(players,make_player(1,true,self.x,self.y))
+            add(eggs,make_nonHostile(true,self.x,0))
         end
     end
 
@@ -235,6 +264,46 @@ function update_player(self)
     end
 end
 
+function update_nonhostile(self)
+    if self.alive then
+        --jump 
+        if self.dy>0 then
+            self.falling = true
+            self.dy = 1
+        elseif self.facing_left then
+            if not fget(mget(ceil((self.x+5)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
+        elseif not self.facing_left then
+            if not fget(mget(ceil((self.x+1)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
+        end
+
+        if self.falling then
+            self.y += self.dy
+        else
+            self.y -= self.dy
+        end
+
+        if not self.falling then
+            move(self, true)
+            if self.facing_left then
+                self.x -= self.dx
+            else
+                self.x += self.dx
+            end
+        end
+        handle_map_collision(self)
+    else
+        del(players,self)
+        if #players < 1 then 
+            _init()
+        end
+    end
+end
 -->8
 --notes
 --[[flag meanings 
@@ -293,7 +362,7 @@ __gfx__
 77777760776676776076776760000000000076000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 77776600777760077760770676000000000060000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __gff__
-0000000004030303080108000000000000202020040000000800000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+0000000004030303000100000000000000202020040000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 __map__
 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
