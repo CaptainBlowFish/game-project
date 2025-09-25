@@ -28,13 +28,15 @@ end
 
 function _draw()
     cls()
-    sspr(0,32,40,16,0,9,160,64)
+    
+    
     if #players>0 then
         draw(players[1],true)
     end
     for player=2,#players do
         draw(players[player])
     end
+    sspr(0,32,40,16,0,9,160,64)
     foreach(eggs, draw)    
 end
 
@@ -82,7 +84,7 @@ function make_nonHostile(egg,x,y)
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
         max_dx = .5,
-        max_dy = 100,
+        max_dy = 16,
         fall_speed = .4,
         falling = true,
         can_jump = true,
@@ -152,6 +154,7 @@ end
 function draw_ui(self)
     local cam = self.cam
     camera()
+    draw_sunset()
     rectfill(0,0,127,9,8)
     spr(33)
     print(self.bread_collected,8,0,7)
@@ -318,6 +321,35 @@ function update_nonhostile(self)
             _init()
         end
     end
+end
+-->8
+--backgrounds
+function draw_sunset()
+    y_start = 114
+    fillp()
+    circfill(64,y_start,128,2)
+    fillp(8)
+    circfill(64,y_start,92,0xD2)
+    fillp(8+512)
+    circfill(64,y_start,88,0xD2)
+    fillp(2+8+512+2048)
+    circfill(64,y_start,80,0xD2)
+    fillp(2+8+16+64+512+2048+4096+16384)
+    circfill(64,y_start,72,0x2D)
+    fillp(2+8+512+2048)
+    circfill(64,y_start,64,0x2D)
+    fillp(8+512)
+    circfill(64,y_start,56,0x2D)
+    fillp()
+    circfill(64,y_start,48,13)
+    fillp(2+8+16+64+512+2048+4096+16384)
+    circfill(64,y_start,40,0xD8)
+    fillp(2+8+512+2048)
+    circfill(64,y_start,32,0xD8)
+    fillp(8+512)
+    circfill(64,y_start,24,0xD8)
+    fillp()
+    circfill(64,y_start,16,8)
 end
 -->8
 --notes
