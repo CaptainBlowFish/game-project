@@ -664,3 +664,15 @@
  rrrri
 2025-09-25 19:47:47 /Users/jacobmilham/Programing/game project/platformer.p8
  r________
+2025-09-25 19:59:01 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-25 19:59:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-25 19:59:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc.........
+2025-09-25 20:00:13 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_________rr
+2025-09-25 20:00:25 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-25 20:01:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrcc

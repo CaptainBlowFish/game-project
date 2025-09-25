@@ -9,7 +9,7 @@ function _init()
     players = {}
     eggs = {}
     add(players,make_player(0))
-    add_new_player()
+    --add_new_player()
     music(0,0,12)
 
 end
@@ -82,8 +82,8 @@ function make_nonHostile(egg,x,y)
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
         max_dx = .5,
-        max_dy = 4,
-        fall_speed = .2,
+        max_dy = 100,
+        fall_speed = .4,
         falling = true,
         can_jump = true,
         facing_left = false,

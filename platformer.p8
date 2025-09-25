@@ -82,8 +82,8 @@ function make_nonHostile(egg,x,y)
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
         max_dx = .5,
-        max_dy = 4,
-        fall_speed = .2,
+        max_dy = 16,
+        fall_speed = .4,
         falling = true,
         can_jump = true,
         facing_left = false,
