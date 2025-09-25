@@ -121,3 +121,558 @@
  rrrrrrrrrc
 2025-09-19 16:23:43 /Users/jacobmilham/Programing/game project/platformer.p8
  r_rrrr____rr_rr__rrrrrrrrrrrr_________r_________
+2025-09-19 16:50:44 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 17:29:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrc
+2025-09-19 17:30:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-19 17:31:21 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrmmmmmrrrrrr
+2025-09-19 17:39:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-19 17:39:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-19 17:40:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrc
+2025-09-19 17:41:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrccccc
+2025-09-19 17:42:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rmmmmrrrm
+2025-09-19 17:43:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-19 17:44:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrri
+2025-09-19 17:44:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-19 17:45:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcc
+2025-09-19 17:45:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-19 17:46:10 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-19 17:47:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 17:50:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ ii
+2025-09-19 17:51:10 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrr
+2025-09-19 17:52:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrcccicccrc
+2025-09-19 17:53:36 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_rc
+2025-09-19 17:53:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 17:54:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 17:54:42 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-19 17:55:07 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-19 17:55:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 17:55:53 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-19 17:56:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrcrrrc
+2025-09-19 17:58:29 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_cmmmmmr_rm
+2025-09-19 17:59:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcmmmmmmmi
+2025-09-19 17:59:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrc
+2025-09-19 18:01:36 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrc.
+2025-09-19 18:04:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrri
+2025-09-19 18:04:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrri
+2025-09-19 18:05:32 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcmmmmmmmmmrrrmc
+2025-09-19 18:07:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-19 18:07:24 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrcccmmmrm
+2025-09-19 18:08:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-19 18:08:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-19 18:09:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrr
+2025-09-19 18:09:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-19 18:10:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 18:10:26 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrr
+2025-09-19 18:13:26 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrc
+2025-09-19 18:14:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-19 18:14:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-19 18:15:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrc
+2025-09-19 18:16:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcmmmmmmmgm.....mccc.cgccrrrrrrrrrr
+2025-09-19 19:06:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-19 19:15:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrigggggggggggggggggggggggggggggggggrrrrrrcggg
+2025-09-19 21:51:58 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcccg
+2025-09-19 21:53:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrc
+2025-09-19 21:56:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-19 22:03:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcgggg.........giiiiiiiiiii.
+2025-09-19 22:08:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrr
+2025-09-19 22:11:32 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrcggggggggg.gg.........ggiccccc
+2025-09-19 22:17:25 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcggg.........gggg.ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ ggggggggggggggggggggg.ggggggggggggggggggggggggggggggggggggggggggggggg.g..ggggggg
+ gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+ ggggggggggggggggggggg.gggggg...mmmmmmmmmmmmmmrimmmmmrrmgcggggggggggggggggggrrrrr
+ rrrrrrgigmii
+2025-09-19 22:35:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-19 22:35:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-19 22:36:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrgmmggggg.......
+2025-09-19 22:36:53 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-19 22:37:32 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-19 22:37:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrcrr
+2025-09-19 22:39:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_________r
+2025-09-19 22:54:31 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcgggg.........
+2025-09-19 22:56:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-19 22:56:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrirrc
+2025-09-19 22:57:07 /Users/jacobmilham/Programing/game project/platformer.p8
+ rgmmmmmrrrr___rrrmgggggggggggggggggrrrgggggggggggggggggrriggggggggggggrrrrrrrrrr
+ gcmmm
+2025-09-19 23:43:40 /Users/jacobmilham/Programing/game project/platformer.p8
+ r..
+2025-09-19 23:50:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rii
+2025-09-19 23:51:07 /Users/jacobmilham/Programing/game project/platformer.p8
+ riicc.cicc
+2025-09-19 23:54:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:01:26 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:01:40 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:06:59 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:09:06 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:11:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 00:12:29 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-20 00:13:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-20 00:13:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 00:14:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 00:15:00 /Users/jacobmilham/Programing/game project/platformer.p8
+ ricc
+2025-09-20 00:15:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ riii...
+2025-09-20 00:16:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ riiccccrccc
+2025-09-20 00:17:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrri
+2025-09-20 00:19:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-20 00:19:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 00:23:27 /Users/jacobmilham/Programing/game project/platformer.p8
+ rii
+2025-09-20 00:23:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-20 00:27:10 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrir
+2025-09-20 00:27:29 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 00:29:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc.ccccc
+2025-09-20 00:49:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrri
+2025-09-20 00:52:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ i
+2025-09-20 00:52:28 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-20 00:52:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrr
+2025-09-20 00:55:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri.iii.........c
+2025-09-20 01:03:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ ric
+2025-09-20 01:04:25 /Users/jacobmilham/Programing/game project/platformer.p8
+ rii
+2025-09-20 01:04:53 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 01:05:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrr
+2025-09-20 01:08:27 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrr
+2025-09-20 01:09:45 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-20 01:10:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 01:11:31 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-20 01:12:31 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcggggg.........
+2025-09-20 01:13:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 01:14:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ rir
+2025-09-20 01:18:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 01:18:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 01:19:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-20 01:21:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 01:21:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrr
+2025-09-20 01:26:39 /Users/jacobmilham/Programing/game project/platformer.p8
+ i
+2025-09-20 01:26:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrirrrrrcggg.........g
+2025-09-20 01:32:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 01:33:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-20 01:33:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 01:34:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 01:35:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri
+2025-09-20 01:36:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 01:36:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-20 01:37:57 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-20 01:39:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri.
+2025-09-20 01:40:59 /Users/jacobmilham/Programing/game project/platformer.p8
+ ii
+2025-09-20 01:41:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ rii..ici
+2025-09-20 01:42:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 01:43:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ rii.
+2025-09-20 01:44:29 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-20 01:46:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ r
+2025-09-20 01:46:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrrrrc
+2025-09-20 01:47:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrricrrrrrrrcrii.........i
+2025-09-20 01:50:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrc
+2025-09-20 01:51:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rccccccccccc
+2025-09-20 01:53:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_rrrrrr
+2025-09-20 03:40:27 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrcii
+2025-09-20 03:44:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrcc
+2025-09-20 03:45:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrc
+2025-09-20 03:47:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrric..
+2025-09-20 03:48:29 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 03:49:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrr
+2025-09-20 03:50:08 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcgmmmmmmmmmmmmmmmmm.mcc
+2025-09-20 03:56:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ iiic
+2025-09-20 03:56:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrc
+2025-09-20 04:00:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-20 04:02:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrcgcc
+2025-09-20 04:04:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrricr
+2025-09-20 04:05:32 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrr
+2025-09-20 04:07:17 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrr
+2025-09-20 04:08:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrr___rrrrrrrrc
+2025-09-20 04:10:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.........m.........m....mmmmmm........mm.........g
+ mmmrrrrmmmmmmmrrrmm.........mmmm..irrm.........mmmmmmmmmmmmm.....mmmmmmmmmmmmmmm
+ rrrrrrrrrrrrrrr
+2025-09-20 04:32:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rccgggggggggggggggggggggggggggggggrrrggggggggggggggg......ggg
+2025-09-20 04:58:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ ii
+2025-09-20 05:01:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ ii
+2025-09-20 05:03:37 /Users/jacobmilham/Programing/game project/platformer.p8
+ rri
+2025-09-20 05:04:57 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 05:05:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 05:07:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 05:08:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrc.........c
+2025-09-20 05:10:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-20 05:10:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrri
+2025-09-20 05:12:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 05:13:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc.........
+2025-09-20 05:13:39 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrr_____rrrr
+2025-09-20 05:14:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr__r_________
+2025-09-20 05:15:19 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 05:18:58 /Users/jacobmilham/Programing/game project/platformer.p8
+ iiicccccrrrrrcc....cc.........
+2025-09-20 05:20:45 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 05:25:47 /Users/jacobmilham/Programing/game project/backup/20250920_042215_platformer.p8
+ rrrrrrrrrrrrr
+2025-09-20 11:50:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 11:52:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 11:52:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ r________rrrrrr
+2025-09-20 11:53:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ rgggg.gggggggggrrrrrrgmmmmmmmrrrrrrr_m
+2025-09-20 11:57:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ ic..
+2025-09-20 11:57:24 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrcggrrstssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssi....
+ 
+2025-09-20 12:02:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ isccc.........rrrrrr
+2025-09-20 12:03:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcsttttsssssssssssssssssssssssss.sssss.ssssssss.ssssssssss.sssssssssssssssssssss
+ ssssssssss.ssssssssssssssssss....ssssssssssssssssssssssssssssssssssssssss.ssssss
+ ssss.sssssssss..cccccc
+2025-09-20 12:13:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrciii..itttt..
+2025-09-20 12:14:33 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:17:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:17:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrctsssssssssssssctttttt.....iiii.....i.........
+2025-09-20 12:17:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr______r__
+2025-09-20 12:18:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:19:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_rttssssssssssssssrsrr________
+2025-09-20 12:19:06 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr___r__r____
+2025-09-20 12:19:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr_________ctttrrrrrt...tt
+2025-09-20 12:24:37 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrcsggg.ggggggggggggggrrrrrgggg
+2025-09-20 12:27:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-20 12:27:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-20 12:28:08 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 12:28:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:28:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrggg.........gcc
+2025-09-20 12:34:01 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrcc
+2025-09-20 12:35:27 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrrcc
+2025-09-20 12:36:57 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr_
+2025-09-20 12:37:12 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrr________
+2025-09-20 12:40:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rc
+2025-09-20 12:42:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:42:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-20 12:42:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:43:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ ii.........rrr_________r__
+2025-09-20 12:44:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:45:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr_________
+2025-09-20 12:45:58 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-20 12:46:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:47:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr_rcgg....
+2025-09-20 12:49:08 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 12:49:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr_rrrrcc....cgg.......
+2025-09-20 12:53:31 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-20 12:54:27 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr_rcccrc
+2025-09-20 12:59:13 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 13:01:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrircggggggg.........ggggggggggggggggggggggg
+2025-09-20 13:10:36 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-20 13:12:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ irrrggggggggggggggggggggggg.........
+2025-09-20 13:15:35 /Users/jacobmilham/Programing/game project/platformer.p8
+ i
+2025-09-20 13:15:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-20 13:16:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrgggggggggggggrrrr
+2025-09-20 13:18:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrr
+2025-09-20 13:20:43 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrr
+2025-09-20 13:22:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr
+2025-09-20 13:26:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-20 13:42:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrr________rrrrrrrrrrrr__rrr______
+2025-09-23 03:48:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ rggg.........g.gggg.g.........gggmggcgg.........giiii.iiii.iiiiiigg..gii....i...
+ ......g.........giiiii.iii.i..i.iiiggii
+2025-09-23 15:13:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri.cc
+2025-09-23 15:14:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_rr__rc.........r__r_sts.........ii
+2025-09-23 16:35:15 /Users/jacobmilham/Programing/game project/platformer.p8
+ rriicc..
+2025-09-23 16:36:22 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcc......
+2025-09-23 16:36:48 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_c
+2025-09-23 16:37:39 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc
+2025-09-23 16:38:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-23 16:41:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrccmggggrrrrrrrr_________rrrrr_rr_________
+2025-09-25 13:33:42 /Users/jacobmilham/Programing/game project/platformer.p8
+ rgggi.........igggggg.........mmmmggggggggggggggg.g.g.gcc.........crrrrrrrrrrrrr
+ rrrrrrrrrr_rrrcmmmmmmmm.........mmmm.........mmi
+2025-09-25 14:05:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ iicci
+2025-09-25 14:05:41 /Users/jacobmilham/Programing/game project/platformer.p8
+ r..c
+2025-09-25 14:07:02 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-25 14:10:11 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrcc.........cccrrrr
+2025-09-25 14:11:51 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-25 14:12:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_________rrcrr
+2025-09-25 14:13:32 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-25 14:14:14 /Users/jacobmilham/Programing/game project/platformer.p8
+ rri
+2025-09-25 14:14:38 /Users/jacobmilham/Programing/game project/platformer.p8
+ ri..c
+2025-09-25 14:18:16 /Users/jacobmilham/Programing/game project/platformer.p8
+ riiicc
+2025-09-25 14:18:55 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-25 14:19:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-25 14:20:36 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrr
+2025-09-25 14:21:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ riirriiii.........
+2025-09-25 14:22:54 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr
+2025-09-25 14:23:52 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-25 14:24:36 /Users/jacobmilham/Programing/game project/platformer.p8
+ rr_________rrrrrrcccccccccrrrrrrrrr_rr_rrr________r_rrrrrrrrrrrrrr_r_rr__rrrrrrr
+ r_________rrr_rrrrrrrrrrrrrr_rrrrrrrrrrrrrrr_________rrrr_________rri.ir________
+ r_________ctsstttttttttt.....tt...ttt..t........ttsss....ssssssssssss.sss.ss.sss
+ .sss.ss....s....sssss..sssssssss..sssssssssssssssss.sss..ssssssssss..sssssssss.s
+ sss......s.ssssccc...crcssssssssssssssss......ssssss.s...sss..sssssssssss..sssss
+ ssssssssssssssssssssssssssssssssssssssssssssssssssssss.ss....sssssssssssssssssss
+ ssssssssssssssssssssssssssssss..srrrrrr_____i.........ss.........gggg.gggggggggg
+ ggggggggggg.gg....ggggggggggggggggggggggrrrrrr
+2025-09-25 15:09:05 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcssssssssssss...sss..ssssssssssssssss.ssssssssssssss.ssssssssssssssssssssss....
+ ....sss..sss...sss.........sss...s....i.........smmmmmmmmmmmrrmmmmmmrrrrrrr__rrm
+ mmmmmmmrrrrrrrrrr_i.........
+2025-09-25 15:25:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrcsss...ssssssss.ssss......sssssssssssssssss....s.....ss.....ssss.........
+2025-09-25 19:21:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcc
+2025-09-25 19:21:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rric.........
+2025-09-25 19:23:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-25 19:23:42 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcccc.........cccrir_r
+2025-09-25 19:25:53 /Users/jacobmilham/Programing/game project/platformer.p8
+ r.
+2025-09-25 19:33:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-25 19:35:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrc.........ri
+2025-09-25 19:36:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrcc.........c
+2025-09-25 19:46:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ iii
+2025-09-25 19:47:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrri
+2025-09-25 19:47:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ r________
+2025-09-25 19:59:01 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrc
+2025-09-25 19:59:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-25 19:59:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrc.........
+2025-09-25 20:00:13 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr_________rr
+2025-09-25 20:00:25 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrr
+2025-09-25 20:01:56 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrcc
