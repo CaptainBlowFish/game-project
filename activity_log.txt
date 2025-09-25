@@ -640,3 +640,27 @@
  rcssssssssssss...sss..ssssssssssssssss.ssssssssssssss.ssssssssssssssssssssss....
  ....sss..sss...sss.........sss...s....i.........smmmmmmmmmmmrrmmmmmmrrrrrrr__rrm
  mmmmmmmrrrrrrrrrr_i.........
+2025-09-25 15:25:30 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrcsss...ssssssss.ssss......sssssssssssssssss....s.....ss.....ssss.........
+2025-09-25 19:21:23 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcc
+2025-09-25 19:21:46 /Users/jacobmilham/Programing/game project/platformer.p8
+ rric.........
+2025-09-25 19:23:20 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrc
+2025-09-25 19:23:42 /Users/jacobmilham/Programing/game project/platformer.p8
+ rcccc.........cccrir_r
+2025-09-25 19:25:53 /Users/jacobmilham/Programing/game project/platformer.p8
+ r.
+2025-09-25 19:33:50 /Users/jacobmilham/Programing/game project/platformer.p8
+ 
+2025-09-25 19:35:49 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrc.........ri
+2025-09-25 19:36:03 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrcc.........c
+2025-09-25 19:46:04 /Users/jacobmilham/Programing/game project/platformer.p8
+ iii
+2025-09-25 19:47:09 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrri
+2025-09-25 19:47:47 /Users/jacobmilham/Programing/game project/platformer.p8
+ r________
