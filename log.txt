@@ -94,3 +94,16 @@
 [5851250] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
 [5934839] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
 [6378698] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[6996401] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[7085415] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[7128126] window closed (14)
+[7128127] codo_exit
+[7128127]   cmusic_stop
+[7128127]   codo_main_exit
+[7128128]   codo_config_save
+[7128128]   codo_sound_exit
+[7128128]   codo_video_exit
+[7128146]   codo_joystick_exit
+[7128146]   codo_system_exit
+[7128146]   codo_items_created: 1306
+[7128146] ok
