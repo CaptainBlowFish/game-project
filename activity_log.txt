@@ -774,4 +774,31 @@
 2025-09-25 22:27:28 /Users/jacobmilham/Programing/game project/platformer.p8
  
 2025-09-25 22:27:49 /Users/jacobmilham/Programing/game project/platformer.p8
- rrrrr_rr__
+ rrrrr_rr__rc.........c.........c..c.........
+2025-09-26 00:38:01 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrmmmmmmrrrr__mtssss....sstt..tssssst...tssssssssssssssssssssssssssss
+ ssssssssss.sssssssssssssssssssssssssssssssssssssss.........ssssssssss.........ss
+ ssssssssssssssssssssss.s.sssssssss.ssssssss.s..ssssssssss.sssssssssssss.s.s.sttt
+ tt.tttt..tttt.tsssssssssssssttstsssssssss.ssssssssssttssstmsssssssttsstttttttt.t
+ tsssssssssss.ssssss.ssssssssssssssssssst...sssssssssssssssssssss...sssssssssssss
+ sssssssssttttttsssssssssstttsssssssssssssss.ttsstsstt.........tssst....ttttttttt
+ ttttttttttmgrgsssssssssssss...stt.tsssssssssss.sssttstssttsssssttsssssssssssssss
+ ssssssssssssssssststtssssssssssssssttttttttttt.tt..ttsssssssssssssssstttssssssss
+ sssssssssssssssssssss..ssssssssssssssssssssssssssssssssssssssssssssssssssss.s...
+ .....stsssssssssssssssssssstttttssssssssssstssssssssss.........s.........sssssss
+ ssssssssss.........ss........ttt...t..ttttttt.ttt........tssssssssssss...sssssss
+ ssssssssssssssss...s.........ssssssss.........sssssssss.ssssssssssssssssssssssss
+ sssssssssssssssssssssssssssss.ssssssssssssssssssssssssssssssssssss.s....sss.ssss
+ ssssssssssssssssssssssssssssss.ssssssssssssssssssssssssssssssss.ssssss.sssssssss
+ sssssssssssss.stsssssssssssssssssssstsss.ss....s..s.....ss.sssssssssssssssssssss
+ ssssssssssssssssssssssssssssssssssssssssssssssssssss......ssssssssssssssssssssss
+ ssssssss.sss.ssssssssssssssssssssssssssssssssstt.ssttss.sss...ssssssssssssssssss
+ ssssss....ss.sssssssttsst.ttt.ttssssssss.........ss..ssstt..sssssssssssssssssst.
+ tssssss.sssssss..ssssss.sssssttt....ssss.ssssssssssssssssss.s.ssssssssssssssssss
+ ssssttttt.tttt.ttttttttttttsssssssssssss.sssssssssssssssssssssssssssssssssssssss
+ sssssssssssssssssssssss....sstttt...ttssssssssssssssss.ss..ssss...ssssssssss.s..
+ ...ssssssss.ssss.sssss.ssssssssss.sssssssssssssssssssssssss.ssssssssssssssstttss
+ stt...tt.tttt.ttssssstttttttttttttttttttttt.tt.tsssssssssssstt.....tsssssttttstt
+ ssssssssssssssssssssstt.........ttt...tttcrrr__c.........c.......cr_rrcctttttttt
+ ttttsssss.sss.sssssssssssst...ssssssstttt....t.......t.........ts.........ssssss
+ 
