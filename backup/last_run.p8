@@ -8,7 +8,8 @@ function _init()
     screen_size = 128
     players = {}
     eggs = {}
-    add(players,make_player(0))
+    map_animation_frames = 3
+    add(players,make_player(0,0))
     --add_new_player()
     music(0,0,12)
 end
@@ -27,8 +28,6 @@ end
 
 function _draw()
     cls()
-    
-    
     if #players>0 then
         draw(players[1],true)
     end
@@ -41,7 +40,7 @@ end
 
 -->8
 --player
-function make_player(player_num, egg, x, y, level)
+function make_player(player_num, x, y, level)
     player = {
         level = level or 0,
         player_num = player_num,
@@ -60,13 +59,13 @@ function make_player(player_num, egg, x, y, level)
         runing_sprite_1 = false,
         current_sprite = 1,
         map_width = 127,
-        map_height = 16,
+        map_height = 32, --Measured in map tiles
         bread_collected = 0,
         alive = true,
         update_animations = true, --will halve the frame rate
         cam = {
             x = 0,
-            y = 0
+            y = (level or 0) *screen_size
         }
     }
     return player
@@ -77,8 +76,8 @@ function add_new_player(player_num)
     add(players,make_player(player_num))
 end
 
-function make_nonHostile(egg,x,y)
-    player = {
+function make_non_hostile(egg,x,y)
+    non_hostile = {
         egg=egg or false,
         x = x or 10,--left
         y = y or 80,--top
@@ -96,15 +95,10 @@ function make_nonHostile(egg,x,y)
         current_sprite = 1,
         map_width = 127,
         map_height = 16,
-        bread_collected = 0,
         alive = true,
         update_animations = true, --will halve the frame rate
-        cam = {
-            x = 0,
-            y = 0
-        }
     }
-    return player
+    return non_hostile
 end
 
 -->8
@@ -125,7 +119,6 @@ end
 
 function move_cam(self)
     self.cam.x = self.x - screen_size/2
-    self.cam.y = 0
 
     if (self.cam.x < 0) self.cam.x = 0
 end
@@ -139,6 +132,7 @@ function draw(self,draw_map)
             move_cam(self)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
+
         end
         pal(3,3+player_num)
         spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
@@ -162,7 +156,6 @@ function draw_ui(self)
     spr(33)
     print(self.bread_collected,8,0,7)
     camera(cam.x,cam.y)
-
 end
 -->8
 --movement
@@ -199,44 +192,106 @@ end
 
 function handle_map_collision(self)
     --handles the player colliding with the map
-    local x = mid(self.x,self.x+8)/8 --divides by 8 to get the position of the player relative to the map
-    local y = self.y/8 -- a map square is an 8x8 square of pixels
-    if self.facing_left then
-        x = ceil(x)
-    else
-        x = ceil(x)+1
-    end
-    if self.falling then
-        y = ceil(y)
-    else
-        y = flr(y)
-    end
-    if fget(mget(x,y),0) then 
-        if self.falling then
+    
+    if self.dy >0 then
+        if self.falling and collide_map(self,"down",0) then 
             self.can_jump = true
             self.falling = false
             self.dy = 0
-            self.y = (y-1)*8
-        elseif self.dx> 0 then
-            self.dx = 0
-            if self.facing_left then
-                self.x = (x)*8
-            else 
-                self.x = (x-2)*8
-            end
+            self.y-=((self.y+8+1)%8)-1
+        elseif collide_map(self,"up",1) then
+            self.can_jump = false
+            self.falling = true
+            self.dy = 0
+            self.y-=((self.y+8+1)%8)+1
         end
-    elseif fget(mget(x,y),2) then
+    end
+    if self.facing_left and collide_map(self,"left",1) then
+        self.x += 1
+        self.dx = 0
+    elseif collide_map(self,"right",1) then 
+        self.x -= 1
+        self.dx = 0
+    end
+    
+    if collide_map(self,"down",2) then
         self.alive = false
-    elseif fget(mget(x,y),3) then 
-        mset(x,y,0)
+    elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
         sfx(0)
         self.bread_collected += 1
         if self.bread_collected %3==0 then
-            add(eggs,make_nonHostile(true,self.x,0))
+            add(eggs,make_non_hostile(true,self.x,0))
         end
     end
 
 end
+
+function collide_map(self,aim,flag,collectable)
+    --self = table needs x,y,w,h
+    --aim = left,right,up,down
+    local collides = false
+    local x=self.x  
+    local y=self.y
+    local w=8  
+    local h=8
+    local x1=0	 
+    local y1=0
+    local x2=0  
+    local y2=0
+    collectable = collectable or false
+
+    if aim=="left" then
+        x1=x-1  
+        y1=y
+        x2=x    
+        y2=y+h-1
+    elseif aim=="right" then
+        x1=x+w-1    
+        y1=y
+        x2=x+w  
+        y2=y+h-1
+    elseif aim=="up" then
+        x1=x+2    
+        y1=y-1
+        x2=x+w-3  
+        y2=y
+    elseif aim=="down" then
+        x1=x+2      
+        y1=y+h
+        x2=x+w-3    
+        y2=y+h
+    end
+
+    --pixels to tiles
+    x1/=8    
+    y1/=8
+    x2/=8    
+    y2/=8
+
+    --This makes it work MAKE IT LESS UGLY LATER
+    x1+=1
+    x2+=1
+    if fget(mget(x1,y1), flag) then 
+        collides = true
+        if (collectable) mset(x1,y1,0)
+    end
+    if fget(mget(x1,y2), flag) then
+        collides = true
+        if (collectable) mset(x1,y2,0)
+    end
+    if fget(mget(x2,y1), flag) then
+        collides = true
+        if (collectable) mset(x2,y1,0)
+    end
+    if fget(mget(x2,y2), flag) then
+        collides = true
+        if (collectable) mset(x2,y2,0)
+    end
+
+    return collides
+end
+
+
 
 function update_player(self)
     if self.alive then
@@ -365,6 +420,7 @@ end
 1 = can't jump through
 2 = kills the player
 3 = collectable
+4 = animated section
 ]]--
 __gfx__
 00000000000003000000030000000300c11c11c133bb3bb3444444449988888900077750b333333b000000000000000000000000000000000000000000000000

@@ -59,7 +59,7 @@ function make_player(player_num, x, y, level)
         runing_sprite_1 = false,
         current_sprite = 1,
         map_width = 127,
-        map_height = 32, --Measured in map tiles
+        map_height = 16, --Measured in map tiles
         bread_collected = 0,
         alive = true,
         update_animations = true, --will halve the frame rate
@@ -157,6 +157,11 @@ function draw_ui(self)
     print(self.bread_collected,8,0,7)
     camera(cam.x,cam.y)
 end
+
+function update_map(self)
+    --Will update the animations of certain sprites on the map assumes that the sprites are next to eachother on the sprite sheet
+    
+end
 -->8
 --movement
 function move(self, left)
@@ -192,31 +197,26 @@ end
 
 function handle_map_collision(self)
     --handles the player colliding with the map
-    
-    if self.dy >0 then
-        if self.falling and collide_map(self,"down",0) then 
+
+    if collides(self,0) then 
+        if self.dx> 0 then
+            self.dx = 0
+            if self.facing_left then
+                self.x = (x)*8
+            else 
+                self.x = (x-2)*8
+            end  
+        end
+        if self.falling then
             self.can_jump = true
             self.falling = false
             self.dy = 0
-            self.y-=((self.y+8+1)%8)-1
-        elseif collide_map(self,"up",1) then
-            self.can_jump = false
-            self.falling = true
-            self.dy = 0
-            self.y-=((self.y+8+1)%8)+1
+            self.y = (y-1)*8
         end
-    end
-    if self.facing_left and collide_map(self,"left",1) then
-        self.x += 1
-        self.dx = 0
-    elseif collide_map(self,"right",1) then 
-        self.x -= 1
-        self.dx = 0
-    end
-    
-    if collide_map(self,"down",2) then
+    elseif fget(mget(x,y),2) then
         self.alive = false
-    elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
+    elseif fget(mget(x,y),3) then 
+        mset(x,y,0)
         sfx(0)
         self.bread_collected += 1
         if self.bread_collected %3==0 then
@@ -226,72 +226,31 @@ function handle_map_collision(self)
 
 end
 
-function collide_map(self,aim,flag,collectable)
-    --self = table needs x,y,w,h
-    --aim = left,right,up,down
-    local collides = false
-    local x=self.x  
-    local y=self.y
-    local w=8  
-    local h=8
-    local x1=0	 
-    local y1=0
-    local x2=0  
-    local y2=0
-    collectable = collectable or false
+function collides(self,flag)
+    --returns if a coordinate collides with a flagged sprite on the map
+    local collided = false
 
-    if aim=="left" then
-        x1=x-1  
-        y1=y
-        x2=x    
-        y2=y+h-1
-    elseif aim=="right" then
-        x1=x+w-1    
-        y1=y
-        x2=x+w  
-        y2=y+h-1
-    elseif aim=="up" then
-        x1=x+2    
-        y1=y-1
-        x2=x+w-3  
-        y2=y
-    elseif aim=="down" then
-        x1=x+2      
-        y1=y+h
-        x2=x+w-3    
-        y2=y+h
+    if self.facing_left then
+        for i=0,7 do
+            collided = collided or fget(mget(self.x,self.y+i),flag)
+        end
+    else
+        for i=0,7 do
+            collided = collided or fget(mget(self.x+7,self.y+i),flag)
+        end
+    end
+    if self.falling then
+        for i=0,7 do
+            collided = collided or fget(mget(self.x+i,self.y+7),flag)
+        end
+    else
+        for i=0,7 do
+            collided = collided or fget(mget(self.x+i,self.y),flag)
+        end
     end
 
-    --pixels to tiles
-    x1/=8    
-    y1/=8
-    x2/=8    
-    y2/=8
-
-    --This makes it work MAKE IT LESS UGLY LATER
-    x1+=1
-    x2+=1
-    if fget(mget(x1,y1), flag) then 
-        collides = true
-        if (collectable) mset(x1,y1,0)
-    end
-    if fget(mget(x1,y2), flag) then
-        collides = true
-        if (collectable) mset(x1,y2,0)
-    end
-    if fget(mget(x2,y1), flag) then
-        collides = true
-        if (collectable) mset(x2,y1,0)
-    end
-    if fget(mget(x2,y2), flag) then
-        collides = true
-        if (collectable) mset(x2,y2,0)
-    end
-
-    return collides
+    return collided
 end
-
-
 
 function update_player(self)
     if self.alive then
@@ -486,9 +445,9 @@ __map__
 0000000000000000000000000000000000000000000000000000000000000019000009090900000000000000000505050500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000019000000190000000909000000000000000000000000000000000000050500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0000000000000000000000000000000000000000000000000000000000000019191919190000090909090000000000000000000000000000000000000000000000000505050505000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-0000000900000000000000000000000000000000000000000009000000000000000019000000001919000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-0000001900000000000000000000000000000000000000000019000000000000000019000000001919000021000021000021000000050505050000000000000505000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-0000001900000000000000000909000000090000000900000019000000000000000019000000001919000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+2121210900000000000000000000000000000000000000000009000000000000000019000000001919000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+2121211900000000000000000000000000000000000000000019000000000000000019000000001919000021000021000021000000050505050000000000000505000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+2121211900000000000000000909000000090000000900000019000000000000000019000000001919000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050505050000000000000000050505000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 0606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040400000000000000000000000000000000000000000000000000
 __sfx__
