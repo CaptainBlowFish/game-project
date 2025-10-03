@@ -191,9 +191,9 @@ function jump(self)
     end
 end
 
-function handle_map_collision(self, player)
-    --handles the mobile things colliding with the map
-    player = player or true
+function handle_map_collision(self)
+    --handles the player colliding with the map
+    
     if self.dy >0 then
         if self.falling and collide_map(self,"down",0) then 
             self.can_jump = true
@@ -214,21 +214,22 @@ function handle_map_collision(self, player)
         self.x -= 1
         self.dx = 0
     end
-    if player then 
-        if collide_map(self,"down",2) then
-            self.alive = false
-        elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
-            sfx(0)
-            self.bread_collected += 1
-            if self.bread_collected %3==0 then
-                add(eggs,make_non_hostile(true,self.x,0))
-            end
-        elseif collide_map(self,"up",4) or collide_map(self,"down",4) or collide_map(self,"left",4) or collide_map(self,"right",4) then 
-            local temp_players = {}
-            for i=1,#players do
-                add(temp_players,make_player(players[i].player_num,players[i].level+1))
-            end
-            players = temp_players
+    
+    if collide_map(self,"down",2) then
+        self.alive = false
+    elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
+        sfx(0)
+        self.bread_collected += 1
+        if self.bread_collected %3==0 then
+            add(eggs,make_non_hostile(true,self.x,0))
+        end
+    elseif collide_map(self,"up",4) or collide_map(self,"down",4) or collide_map(self,"left",4) or collide_map(self,"right",4) then 
+        local temp_players = {}
+        for i=0,#players do
+            add(temp_players,make_player(players[i].player_num,players[i].level+1),i)
+        end
+        if self.bread_collected %3==0 then
+            add(eggs,make_non_hostile(true,self.x,0))
         end
     end
 
@@ -310,16 +311,16 @@ function update_player(self)
             if self.dy>0 then
                 self.falling = true
                 self.dy = 1
-            elseif self.facing_left then
-                if not collide_map(self,"down",0) and not self.falling then
-                    self.falling = true
-                    self.dy  = self.fall_speed
-                end
-            elseif not self.facing_left then
-                if not collide_map(self,"down",0) and not self.falling then
-                    self.falling = true
-                    self.dy  = self.fall_speed
-                end
+        elseif self.facing_left then
+            if not fget(mget(ceil((self.x+5)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
+        elseif not self.facing_left then
+            if not fget(mget(ceil((self.x+1)/8),flr(self.y/8)+1),1) and not self.falling then
+                self.falling = true
+                self.dy  = self.fall_speed
+            end
             end
         end
         if self.y> screen_size + screen_size*self.level then
@@ -385,6 +386,11 @@ function update_nonhostile(self)
             end
         end
         handle_map_collision(self)
+    else
+        del(players,self)
+        if #players < 1 then 
+            _init()
+        end
     end
 end
 -->8
