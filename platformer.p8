@@ -2,40 +2,66 @@ pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
 --mr duck man!!
---By Jacob Milham, Trevor Tavolacci, Nova Wise
-
+--By jacob milham, trevor tavolacci, nova wise
 function _init()
+    main_menu = true
     screen_size = 128
     players = {}
     eggs = {}
     add(players,make_player(0,0))
-    if (stat(6)) add_new_player()
+    --add_new_player()
+
     --I just don't wanna listen to ts
     --music(0,0,12)
+
+    menu = make_menu({"sTART","cREDDITS"}, {exit_start_menu,show_credits})
+    selected_menu_item = 1
+    toggle_hover_menu_item(menu,selected_menu_item)
 end
 
 function _update()
-    foreach(players,update_player)
-    for player=1,#players do
+    if main_menu then
+        if btnp(⬇️) then
+            toggle_hover_menu_item(menu,selected_menu_item)
+            if (selected_menu_item<#menu) selected_menu_item+=1
+            toggle_hover_menu_item(menu,selected_menu_item)
+        end 
+        if btnp(⬆️) then
+            toggle_hover_menu_item(menu,selected_menu_item)
+            if (selected_menu_item>1) selected_menu_item-=1
+            toggle_hover_menu_item(menu,selected_menu_item)
+        end 
+        if btnp(❎) or btnp(🅾️) then 
+            cls()
+            menu[selected_menu_item].function_call()
+        end
+    else
+        foreach(players,update_player)
+        for player=1,#players do
+        end
+        
+        if #players<1 then
+            run()
+            
+        end
+        foreach(eggs,update_nonhostile)
     end
-    
-    if #players<1 then
-        reload(0x1000, 0x1000, 0x2000,"platformer.p8")
-        _init()
-    end
-    foreach(eggs,update_nonhostile)
 end
 
 function _draw()
-    cls()
-    if #players>0 then
-        draw(players[1],true)
+    if main_menu then
+        show_menu(menu)
+    else
+        cls()
+        if #players>0 then
+            draw(players[1],true)
+        end
+        for player=2,#players do
+            draw(players[player])
+        end
+        sspr(0,32,40,16,0,9,160,64)
+        foreach(eggs, draw)    
     end
-    for player=2,#players do
-        draw(players[player])
-    end
-    sspr(0,32,40,16,0,9,160,64)
-    foreach(eggs, draw)    
 end
 
 -->8
@@ -150,9 +176,8 @@ function draw(self,draw_map)
         end
         self.update_animations = not self.update_animations
     else
-        print("player",self.cam.x,self.cam.y,8)
-        print(player_num,self.cam.x + 26,self.cam.y,8)
-        print("died",self.cam.x+32,self.cam.y,8)
+        print("eVERYONE IS DEAD",self.cam.x,self.cam.y,8)
+        
     end
 end
 
@@ -419,6 +444,89 @@ function draw_sunset()
     fillp()
     circfill(64,y_start,16,8)
 end
+-->8
+--start menu
+function show_menu(menu)
+    --displays the passed menu
+    for item=1,#menu do
+        rectfill(menu[item].x,menu[item].y,menu[item].x+menu[item].width,menu[item].y+menu[item].height,menu[item].background_color)
+        rect(menu[item].x,menu[item].y,menu[item].x+menu[item].width,menu[item].y+menu[item].height,menu[item].highlight_color)
+        print(menu[item].text,menu[item].text_x, menu[item].text_y,menu[item].color)
+    end
+end 
+function toggle_hover_menu_item(menu,index)
+    --shows that a menu item is being hovered over graphically
+    local old_item = menu[index]
+    menu[index].highlight_color, menu[index].background_color =old_item.background_color, old_item.highlight_color
+end
+
+function make_menu(menu_item_names,menu_item_functions,start_x,start_y,spacing,item_height,color,background_color,highlight_color)
+    --returns a list of all the start menu items
+    local start_x = start_x or 36
+    local start_y = start_y or 8
+    local spacing = spacing or 16
+    local item_height = item_height or 8
+    local color = color or 7
+    local background_color = background_color or 6
+    local highlight_color = highlight_color or 5
+    local menu = {}
+    
+    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1],color,background_color,highlight_color)) --initial loop
+    for item=1,#menu_item_names -1 do
+        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1],color,background_color,highlight_color))
+    end
+    return menu
+end
+
+function make_menu_item(text,x,y,function_to_call,color,background_color,highlight_color,width,height)
+    local button = {
+        text = text or "tEST",
+        x = x or 8,
+        y = y or 8,
+        width = width or 56,
+        height = height or 12,
+        color = color,
+        background_color = background_color,
+        highlight_color = highlight_color,
+        text_x = x or 8,
+        text_y = y or 8,
+        function_call = function_to_call
+    }
+    button.text_x += button.width/2--moves it to the center of the button
+    button.text_x -= (#button.text)*2--offsets it so the center of the text when displayed will be in the center. each character is ~4px 
+    button.text_y += button.height/2
+    button.text_y -= 3 --each charater is ~5px tall so half of that
+
+    return button
+end
+
+exit_start_menu = function() 
+    main_menu = false
+end
+
+-->8
+--show creddits 
+show_credits = function()
+    draw_sunset()
+    --just to make it possible to escape this screen
+    selected_menu_item = 1
+    menu = make_menu({"bACK"}, {_init})
+    toggle_hover_menu_item(menu,selected_menu_item)
+    
+    blank_functions = function(count) 
+        functions = {}
+        blank_function = function() return 0 end
+        for i=1,count do
+            add(functions,blank_function)            
+        end
+        return functions
+    end
+    
+    --Make them better lol
+    people_titles = {"_pROGRAMMING_", "GENARIC_PERSON_2","","_aRT_","GENARIC_PERSON_3","","_sOUNDS_","GENARIC_PERSON_5","","_lEVEL_dESIGN_","GENARIC_PERSON_7"}
+    show_menu(make_menu(people_titles,blank_functions(#people_titles),36,24,0,8,7,0,0))
+end
+
 -->8
 --notes
 --[[flag meanings 

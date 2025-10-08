@@ -5,7 +5,9 @@ __lua__
 --Jacob Milham
 
 function _init()
-    menu = make_start_menu()
+    cls()
+    thing= function() return print("menu item chosen",0,0) end
+    menu = make_menu({"test","test 2"},{thing,thing })
     frame = 0
     selected_menu_item = 1
     toggle_hover_menu_item(menu,selected_menu_item)
@@ -14,17 +16,19 @@ end
 function _update()
     
     if btnp(⬇️) then
+        cls()
         toggle_hover_menu_item(menu,selected_menu_item)
         if (selected_menu_item<#menu) selected_menu_item+=1
         toggle_hover_menu_item(menu,selected_menu_item)
     end 
     if btnp(⬆️) then
+        cls()
         toggle_hover_menu_item(menu,selected_menu_item)
         if (selected_menu_item>1) selected_menu_item-=1
         toggle_hover_menu_item(menu,selected_menu_item)
     end 
     if btnp(❎) or btnp(🅾️) then 
-        menu[selected_menu_item].function_call()
+        menu[selected_menu_item].function_call()        
     end
 end
 
@@ -48,19 +52,20 @@ function toggle_hover_menu_item(menu,index)
     menu[index].highlight_color, menu[index].background_color =old_item.background_color, old_item.highlight_color
 end
 
-function make_start_menu(start_x,start_y,spacing,item_height)
+function make_menu(menu_item_names,menu_item_functions,start_x,start_y,spacing,item_height,color,background_color,highlight_color)
     --returns a list of all the start menu items
     local start_x = start_x or 36
     local start_y = start_y or 8
     local spacing = spacing or 16
-    item_height = item_height or 8
+    local item_height = item_height or 8
+    local color = color or 7
+    local background_color = background_color or 6
+    local highlight_color = highlight_color or 5
     local menu = {}
-    local menu_item_names = {"sTART","2 pLAYERS","cREDDITS"} --lower and upper case are swapped inside pico-8
-    local menu_item_functions = {load_other_game,}
     
-    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1])) --initial loop
+    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1],color,background_color,highlight_color)) --initial loop
     for item=1,#menu_item_names -1 do
-        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1]))
+        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1],color,background_color,highlight_color))
     end
     return menu
 end
@@ -72,9 +77,9 @@ function make_menu_item(text,x,y,function_to_call,color,background_color,highlig
         y = y or 8,
         width = width or 56,
         height = height or 12,
-        color = color or 7,
-        background_color = background_color or 6,
-        highlight_color = highlight_color or 5,
+        color = color,
+        background_color = background_color,
+        highlight_color = highlight_color,
         text_x = x or 8,
         text_y = y or 8,
         function_call = function_to_call
@@ -86,10 +91,9 @@ function make_menu_item(text,x,y,function_to_call,color,background_color,highlig
 
     return button
 end
--->8
---other game
-function load_other_game() 
-    load('platformer',"back to menu",true)
+
+exit_start_menu = function() 
+    main_menu = false
 end
 __gfx__
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
