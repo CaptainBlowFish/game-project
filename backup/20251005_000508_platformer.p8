@@ -1,15 +1,15 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
+--main
 --mr duck man!!
---By Jacob Milham, Trevor Tavolacci, Nova Wise
 
 function _init()
     screen_size = 128
     players = {}
     eggs = {}
     add(players,make_player(0,0))
-    if (stat(6)) add_new_player()
+    --add_new_player()
     --I just don't wanna listen to ts
     --music(0,0,12)
 end
@@ -419,6 +419,31 @@ function draw_sunset()
     fillp()
     circfill(64,y_start,16,8)
 end
+
+-->8
+--start menu
+
+function make_start_menu()
+    --returns a list of all the start menu items
+    local menu = {}
+    add(menu,make_menu_item("play"))
+    return menu
+end
+
+function make_menu_item(text,x,y,color,background_color,highlight_color,width,height)
+    local button = {
+        text = text or "TEST",
+        x = x or 8,
+        y = y or 8,
+        width = width or 112,
+        height = height or 112,
+        color = color or 7,
+        background_color = background_color or 5,
+        highlight_color = highlight_color or 6
+    }
+    return button
+end
+
 -->8
 --notes
 --[[flag meanings 
