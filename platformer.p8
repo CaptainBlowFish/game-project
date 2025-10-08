@@ -8,7 +8,6 @@ function _init()
     screen_size = 128
     players = {}
     eggs = {}
-    map_animation_frames = 3
     add(players,make_player(0,0))
     --add_new_player()
     --I just don't wanna listen to ts
