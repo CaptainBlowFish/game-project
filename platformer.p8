@@ -17,6 +17,7 @@ function _init()
     menu = make_menu({"sTART","cREDDITS"}, {exit_start_menu,show_credits})
     selected_menu_item = 1
     toggle_hover_menu_item(menu,selected_menu_item)
+    draw_spotlight(64,64,13,1,2) --background for main menu
 end
 
 function _update()
@@ -52,14 +53,13 @@ function _draw()
     if main_menu then
         show_menu(menu)
     else
-        cls()
-        if #players>0 then
+    cls(2)        
+    if #players>0 then
             draw(players[1],true)
         end
         for player=2,#players do
             draw(players[player])
         end
-        sspr(0,32,40,16,0,9,160,64)
         foreach(eggs, draw)    
     end
 end
@@ -166,7 +166,7 @@ function draw(self,draw_map)
             move_cam(self)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
-
+            sspr(0,32,40,16,0,9,164,64) --title card
         end
         pal(3,3+player_num)
         spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
@@ -184,7 +184,7 @@ end
 function draw_ui(self)
     local cam = self.cam
     camera()
-    draw_sunset()
+    draw_spotlight(64- self.x/40,self.y/8 + 116,2,13,8)
     rectfill(0,0,127,9,8)
     spr(11)
     print(self.bread_collected,8,0,7)
@@ -417,40 +417,45 @@ function update_nonhostile(self)
 end
 -->8
 --backgrounds
-function draw_sunset()
-    y_start = 114
+function draw_spotlight(center_x,center_y,outer_color,middle_color,inner_color)
+    
     fillp() --reset fill pattern for the drawing functions (circfill)
-    circfill(64,y_start,128,2)
+    circfill(center_x,center_y,128,outer_color)
     fillp(8) --adds holes where the default fill color isn't applied
-    circfill(64,y_start,92,0xD2) --first hex number is the primary fill color while the second is the secondary fill 
+    circfill(center_x,center_y,92,middle_color*16+outer_color) --first hex number is the primary fill color while the second is the secondary fill 
     fillp(8+512)
-    circfill(64,y_start,88,0xD2)
+    circfill(center_x,center_y,88,middle_color*16+outer_color)
     fillp(2+8+512+2048)
-    circfill(64,y_start,80,0xD2)
+    circfill(center_x,center_y,80,middle_color*16+outer_color)
     fillp(2+8+16+64+512+2048+4096+16384)
-    circfill(64,y_start,72,0x2D)
+    circfill(center_x,center_y,72,outer_color*16+middle_color)
     fillp(2+8+512+2048)
-    circfill(64,y_start,64,0x2D)
+    circfill(center_x,center_y,64,outer_color*16+middle_color)
     fillp(8+512)
-    circfill(64,y_start,56,0x2D)
+    circfill(center_x,center_y,56,outer_color*16+middle_color)
     fillp()
-    circfill(64,y_start,48,13)
+    circfill(center_x,center_y,48,middle_color)
     fillp(2+8+16+64+512+2048+4096+16384)
-    circfill(64,y_start,40,0xD8)
+    circfill(center_x,center_y,40,middle_color*16+inner_color)
     fillp(2+8+512+2048)
-    circfill(64,y_start,32,0xD8)
+    circfill(center_x,center_y,32,middle_color*16+inner_color)
     fillp(8+512)
-    circfill(64,y_start,24,0xD8)
+    circfill(center_x,center_y,24,middle_color*16+inner_color)
     fillp()
-    circfill(64,y_start,16,8)
+    circfill(center_x,center_y,16,inner_color)
 end
 -->8
 --start menu
 function show_menu(menu)
     --displays the passed menu
     for item=1,#menu do
-        rectfill(menu[item].x,menu[item].y,menu[item].x+menu[item].width,menu[item].y+menu[item].height,menu[item].background_color)
-        rect(menu[item].x,menu[item].y,menu[item].x+menu[item].width,menu[item].y+menu[item].height,menu[item].highlight_color)
+        local x1 = menu[item].x
+        local w =  menu[item].width
+        local y1 = menu[item].y
+        local h = menu[item].height
+        local r = w
+        rrectfill(x1,y1,w,h,r,menu[item].background_color)
+        rrect(x1,y1,w,h,r,menu[item].highlight_color)
         print(menu[item].text,menu[item].text_x, menu[item].text_y,menu[item].color)
     end
 end 
@@ -465,15 +470,15 @@ function make_menu(menu_item_names,menu_item_functions,start_x,start_y,spacing,i
     local start_x = start_x or 36
     local start_y = start_y or 8
     local spacing = spacing or 16
-    local item_height = item_height or 8
-    local color = color or 7
+    local item_height = item_height or 20
+    local color = color or 8
     local background_color = background_color or 6
     local highlight_color = highlight_color or 5
     local menu = {}
     
-    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1],color,background_color,highlight_color)) --initial loop
+    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1],color,background_color,highlight_color,56,item_height)) --initial loop
     for item=1,#menu_item_names -1 do
-        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1],color,background_color,highlight_color))
+        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1],color,background_color,highlight_color,56,item_height))
     end
     return menu
 end
@@ -484,7 +489,7 @@ function make_menu_item(text,x,y,function_to_call,color,background_color,highlig
         x = x or 8,
         y = y or 8,
         width = width or 56,
-        height = height or 12,
+        height = height or 16,
         color = color,
         background_color = background_color,
         highlight_color = highlight_color,
@@ -507,7 +512,7 @@ end
 -->8
 --show creddits 
 show_credits = function()
-    draw_sunset()
+    draw_spotlight(64,64,2,13,8) 
     --just to make it possible to escape this screen
     selected_menu_item = 1
     menu = make_menu({"bACK"}, {_init})
@@ -523,8 +528,9 @@ show_credits = function()
     end
     
     --Make them better lol
-    people_titles = {"_pROGRAMMING_", "GENARIC_PERSON_2","","_aRT_","GENARIC_PERSON_3","","_sOUNDS_","GENARIC_PERSON_5","","_lEVEL_dESIGN_","GENARIC_PERSON_7"}
-    show_menu(make_menu(people_titles,blank_functions(#people_titles),36,24,0,8,7,0,0))
+    people_titles = {"__dUCK_mAN__", "dUCK mAN","","__pEPPERMINT__","jACOB","","_tHAT_oNE_tREE_","nOVA","","_gRASS_tILE_#7_","tREVOR"}
+    show_menu(make_menu(people_titles,blank_functions(#people_titles),36,32,0,8,7,0,0))
+    
 end
 
 -->8

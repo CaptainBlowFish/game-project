@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 493 // number of times program has been run
+[000000]     11 sessions 525 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -54,48 +54,56 @@
 [000000]     49 accept_future 0
 [000000]   
 [000000]   codo_system_init
-[000723]   Compiled against SDL version: 2.28.5
-[000724]   Linked against SDL version:   2.28.5
-[000724]   Current video driver: cocoa
-[000724]   codo_reset_timer
-[000724]   codo_gui_init
-[000724]   codo_keys_init
-[000724]   codo_text_init
-[000724]   codo_video_init
-[000724]   codo_mouse_init
-[000724]   codo_joystick_init
-[000724]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
-[000724]   searching for joysticks
-[000724]     found 0 joysticks
-[000724]   ok
-[000725] ok
-[000733] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000735] codo_set_screen 128 128 8 100
-[000735]  window size: 640 540
-[000809]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000609]   Compiled against SDL version: 2.28.5
+[000610]   Linked against SDL version:   2.28.5
+[000610]   Current video driver: cocoa
+[000610]   codo_reset_timer
+[000610]   codo_gui_init
+[000610]   codo_keys_init
+[000610]   codo_text_init
+[000610]   codo_video_init
+[000610]   codo_mouse_init
+[000610]   codo_joystick_init
+[000610]   Reading controller mappings: /Users/jacobmilham/Programing/game project/sdl_controllers.txt
+[000611]   searching for joysticks
+[000611]     found 0 joysticks
+[000611]   ok
+[000611] ok
+[000615] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000616] codo_set_screen 128 128 8 100
+[000616]  window size: 640 540
+[000650]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000810]  desktop size: 2560 1440
-[000810] ok
-[000816] codo_sound_init mix_buffer_size: 1024
-[000816] codo_sound_init
-[000816] SDL_INIT_AUDIO ok
-[000880] SDL_OpenAudio ok
-[000880]  freq:22050
+[000651]  desktop size: 2560 1440
+[000651] ok
+[000654] codo_sound_init mix_buffer_size: 1024
+[000654] codo_sound_init
+[000654] SDL_INIT_AUDIO ok
+[000687] SDL_OpenAudio ok
+[000687]  freq:22050
  channels:1
-[000880] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[000880] Current audio driver: coreaudio
-[002915] loading /Users/jacobmilham/Programing/game project/menu_test.p8
-[004584] run_cart current_filename: /Users/jacobmilham/Programing/game project/menu_test.p8 running_filename: /Users/jacobmilham/Programing/game project/menu_test.p8 running_cart_lid: 
-[071958] codo_exit
-[071959]   cmusic_stop
-[071959]   codo_main_exit
-[071960]   codo_config_save
-[071960]   codo_sound_exit
-[071960]   codo_video_exit
-[071967]   codo_joystick_exit
-[071967]   codo_system_exit
-[071967]   codo_items_created: 1301
-[071967] ok
+[000687] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000687] Current audio driver: coreaudio
+[002716] loading /Users/jacobmilham/Programing/game project/platformer.p8
+[004394] run_cart current_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_filename: /Users/jacobmilham/Programing/game project/platformer.p8 running_cart_lid: 
+[36137362] codo_exit
+[36137366]   cmusic_stop
+[36137366]   codo_main_exit
+[36137375]   codo_config_save
+[36137376]   codo_sound_exit
+[36137376]   codo_video_exit
+[36137389]   codo_joystick_exit
+[36137389]   codo_system_exit
+[36137389]   codo_items_created: 1303
+[36137389] ok
+o_main_exit
+[1169088]   codo_config_save
+[1169090]   codo_sound_exit
+[1169090]   codo_video_exit
+[1169105]   codo_joystick_exit
+[1169105]   codo_system_exit
+[1169105]   codo_items_created: 1303
+[1169105] ok
