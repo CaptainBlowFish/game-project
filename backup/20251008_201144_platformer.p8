@@ -17,7 +17,7 @@ function _init()
     menu = make_menu({"sTART","cREDDITS"}, {exit_start_menu,show_credits})
     selected_menu_item = 1
     toggle_hover_menu_item(menu,selected_menu_item)
-    draw_spotlight(64,64,13,1,2) --background for main menu
+    draw_spotlight(64,64,1,13,2) --background for main menu
     
 end
 

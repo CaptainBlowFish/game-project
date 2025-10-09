@@ -1,68 +1,41 @@
 pico-8 cartridge // http://www.pico-8.com
 version 43
 __lua__
+--main
 --mr duck man!!
---By jacob milham, trevor tavolacci, nova wise
+
 function _init()
-    main_menu = true
     screen_size = 128
     players = {}
     eggs = {}
     add(players,make_player(0,0))
     --add_new_player()
-
     --I just don't wanna listen to ts
     --music(0,0,12)
-
-    menu = make_menu({"sTART","cREDDITS"}, {exit_start_menu,show_credits})
-    selected_menu_item = 1
-    toggle_hover_menu_item(menu,selected_menu_item)
-    draw_spotlight(64,64,13,1,2) --background for main menu
-    
 end
 
 function _update()
-    if main_menu then
-        if btnp(⬇️) then
-            toggle_hover_menu_item(menu,selected_menu_item)
-            if (selected_menu_item<#menu) selected_menu_item+=1
-            toggle_hover_menu_item(menu,selected_menu_item)
-        end 
-        if btnp(⬆️) then
-            toggle_hover_menu_item(menu,selected_menu_item)
-            if (selected_menu_item>1) selected_menu_item-=1
-            toggle_hover_menu_item(menu,selected_menu_item)
-        end 
-        if btnp(❎) or btnp(🅾️) then 
-            cls()
-            menu[selected_menu_item].function_call()
-        end
-    else
-        foreach(players,update_player)
-        for player=1,#players do
-        end
-        
-        if #players<1 then
-            run()
-            
-        end
-        foreach(eggs,update_nonhostile)
+    foreach(players,update_player)
+    for player=1,#players do
     end
+    
+    if #players<1 then
+        reload(0x1000, 0x1000, 0x2000,"platformer.p8")
+        _init()
+    end
+    foreach(eggs,update_nonhostile)
 end
 
 function _draw()
-    if main_menu then
-        show_menu(menu)
-    else
-        cls()
-        if #players>0 then
-            draw(players[1],true)
-        end
-        for player=2,#players do
-            draw(players[player])
-        end
-        foreach(eggs, draw)    
+    cls()
+    if #players>0 then
+        draw(players[1],true)
     end
+    for player=2,#players do
+        draw(players[player])
+    end
+    sspr(0,32,40,16,0,9,160,64)
+    foreach(eggs, draw)    
 end
 
 -->8
@@ -167,7 +140,7 @@ function draw(self,draw_map)
             move_cam(self)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
-            sspr(0,32,40,16,0,9,164,64) --title card
+
         end
         pal(3,3+player_num)
         spr(self.current_sprite,self.x,self.y,1,1,self.facing_left,self.falling)
@@ -177,15 +150,16 @@ function draw(self,draw_map)
         end
         self.update_animations = not self.update_animations
     else
-        print("eVERYONE IS DEAD",self.cam.x,self.cam.y,8)
-        
+        print("player",self.cam.x,self.cam.y,8)
+        print(player_num,self.cam.x + 26,self.cam.y,8)
+        print("died",self.cam.x+32,self.cam.y,8)
     end
 end
 
 function draw_ui(self)
     local cam = self.cam
     camera()
-    draw_spotlight(64- self.x/40,self.y/8 + 116,2,13,8)
+    draw_sunset()
     rectfill(0,0,127,9,8)
     spr(11)
     print(self.bread_collected,8,0,7)
@@ -418,124 +392,54 @@ function update_nonhostile(self)
 end
 -->8
 --backgrounds
-function draw_spotlight(center_x,center_y,outer_color,middle_color,inner_color)
-    cls(outer_color)
+function draw_sunset()
+    y_start = 114
     fillp() --reset fill pattern for the drawing functions (circfill)
-    circfill(center_x,center_y,128,outer_color)
+    circfill(64,y_start,128,2)
     fillp(8) --adds holes where the default fill color isn't applied
-    circfill(center_x,center_y,92,middle_color*16+outer_color) --first hex number is the primary fill color while the second is the secondary fill 
+    circfill(64,y_start,92,0xD2) --first hex number is the primary fill color while the second is the secondary fill 
     fillp(8+512)
-    circfill(center_x,center_y,88,middle_color*16+outer_color)
+    circfill(64,y_start,88,0xD2)
     fillp(2+8+512+2048)
-    circfill(center_x,center_y,80,middle_color*16+outer_color)
+    circfill(64,y_start,80,0xD2)
     fillp(2+8+16+64+512+2048+4096+16384)
-    circfill(center_x,center_y,72,outer_color*16+middle_color)
+    circfill(64,y_start,72,0x2D)
     fillp(2+8+512+2048)
-    circfill(center_x,center_y,64,outer_color*16+middle_color)
+    circfill(64,y_start,64,0x2D)
     fillp(8+512)
-    circfill(center_x,center_y,56,outer_color*16+middle_color)
+    circfill(64,y_start,56,0x2D)
     fillp()
-    circfill(center_x,center_y,48,middle_color)
+    circfill(64,y_start,48,13)
     fillp(2+8+16+64+512+2048+4096+16384)
-    circfill(center_x,center_y,40,middle_color*16+inner_color)
+    circfill(64,y_start,40,0xD8)
     fillp(2+8+512+2048)
-    circfill(center_x,center_y,32,middle_color*16+inner_color)
+    circfill(64,y_start,32,0xD8)
     fillp(8+512)
-    circfill(center_x,center_y,24,middle_color*16+inner_color)
+    circfill(64,y_start,24,0xD8)
     fillp()
-    circfill(center_x,center_y,16,inner_color)
+    circfill(64,y_start,16,8)
 end
--->8
---start menu
-function show_menu(menu)
-    --displays the passed menu
-    for item=1,#menu do
-        local x1 = menu[item].x
-        local w =  menu[item].width
-        local y1 = menu[item].y
-        local h = menu[item].height
-        local r = w
-        rrectfill(x1,y1,w,h,r,menu[item].background_color)
-        rrect(x1,y1,w,h,r,menu[item].highlight_color)
-        print(menu[item].text,menu[item].text_x, menu[item].text_y,menu[item].color)
-    end
-end 
-function toggle_hover_menu_item(menu,index)
-    --shows that a menu item is being hovered over graphically
-    local old_item = menu[index]
-    menu[index].highlight_color, menu[index].background_color =old_item.background_color, old_item.highlight_color
-end
-
-function make_menu(menu_item_names,menu_item_functions,start_x,start_y,spacing,item_height,color,background_color,highlight_color)
-    --returns a list of all the start menu items
-    local start_x = start_x or 36
-    local start_y = start_y or 8
-    local spacing = spacing or 16
-    local item_height = item_height or 20
-    local color = color or 8
-    local background_color = background_color or 6
-    local highlight_color = highlight_color or 5
-    local menu = {}
-    
-    add(menu,make_menu_item(menu_item_names[1] ,start_x, start_y, menu_item_functions[1],color,background_color,highlight_color,56,item_height)) --initial loop
-    for item=1,#menu_item_names -1 do
-        add(menu,make_menu_item(menu_item_names[item+1], start_x, start_y+item_height*item+spacing*item, menu_item_functions[item+1],color,background_color,highlight_color,56,item_height))
-    end
-    return menu
-end
-
-function make_menu_item(text,x,y,function_to_call,color,background_color,highlight_color,width,height)
-    local button = {
-        text = text or "tEST",
-        x = x or 8,
-        y = y or 8,
-        width = width or 56,
-        height = height or 16,
-        color = color,
-        background_color = background_color,
-        highlight_color = highlight_color,
-        text_x = x or 8,
-        text_y = y or 8,
-        function_call = function_to_call
-    }
-    button.text_x += button.width/2--moves it to the center of the button
-    button.text_x -= (#button.text)*2--offsets it so the center of the text when displayed will be in the center. each character is ~4px 
-    button.text_y += button.height/2
-    button.text_y -= 3 --each charater is ~5px tall so half of that
-
-    return button
-end
-
-exit_start_menu = function() 
-    main_menu = false
-end
-
--->8
---show creddits 
-show_credits = function()
-    draw_spotlight(64,64,2,13,8) 
-    --just to make it possible to escape this screen
-    selected_menu_item = 1
-    menu = make_menu({"bACK"}, {_init})
-    toggle_hover_menu_item(menu,selected_menu_item)
-    
-    blank_functions = function(count) 
-        functions = {}
-        blank_function = function() return 0 end
-        for i=1,count do
-            add(functions,blank_function)            
-        end
-        return functions
-    end
-    
-    --Make them better lol
-    people_titles = {"_pROGRAMMING_", "GENARIC_PERSON_2","","_aRT_","GENARIC_PERSON_3","","_sOUNDS_","GENARIC_PERSON_5","","_lEVEL_dESIGN_","GENARIC_PERSON_7"}
-    show_menu(make_menu(people_titles,blank_functions(#people_titles),36,32,0,8,7,0,0))
-    
-end
-
 -->8
 --notes
+-->8
+--start menu
+
+function make_menu()
+    --returns a list of all the menu items
+
+end
+
+function make_menu_item(text,x,y,color,background_color,highlight_color,width,height)
+    local button = {
+        text = text or "TEST",
+        x = x or 8,
+        y = y or 8,
+        width = width or 112,
+        height = height or 112
+
+    }
+
+end
 --[[flag meanings 
 0 = can stand on
 1 = can't jump through
