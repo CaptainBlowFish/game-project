@@ -80,7 +80,7 @@ function make_player(player_num,level,x,y)
         max_dx = 2,
         max_dy = 10,
         current_jump_height = 0, --Will increase as the player jumps 
-        max_jump_height = 24,
+        max_jump_height = 26,
         fall_speed = .2,
         falling = true,
         can_jump = true,
@@ -115,10 +115,10 @@ function make_non_hostile(egg,x,y)
         y = y or 80,--top
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
-        max_dx = .5,
+        max_dx = .01,
         max_dy = 16,
         current_jump_height = 0, --Will increase as the player jumps 
-        max_jump_height = 24,
+        max_jump_height = 36,
         fall_speed = .4,
         falling = true,
         can_jump = true,
@@ -127,7 +127,7 @@ function make_non_hostile(egg,x,y)
         current_sprite = 1,
         map_width = 127,
         map_height = 16,
-        update_animations = true, --will halve the frame rate
+        update_animations = true, --animate it on 2s
         alive = true
     }
     return non_hostile
