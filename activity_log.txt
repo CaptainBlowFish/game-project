@@ -1451,3 +1451,32 @@
  rrrrrrrr
 2025-10-16 20:42:54 /Users/jacobmilham/Programing/game project/platformer.p8
  rrrrrrrrrrrrrr_________rc
+2025-10-16 20:53:34 /Users/jacobmilham/Programing/game project/platformer.p8
+ r_r_____rr_________rc.cccccc........ccccc.......c...cc.........ccc...immmmmmmmmm
+ mmmmm..mmmmmmm.........mmmmmmm.........mmmmmmmm..mmmmmmmmmmmmmm.mmmmmmm..mmmmmmm
+ mmmm.mmmmmmmmmmmmmmmmm.mmmmmm.mmmmmmmmmmm.mmmmmmmmmmmmmmmmmmmmmm..mm.mmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.mmmmmmmmmmmmmmrrrrrrrrrrrrrrrrrrrrr
+ rrrrrrrrrrrrrrrrrrrrrrrrrrimm.m...mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.mm
+ mmmmrrrrrrrrrrrrrrrrrrrrrrrrrrmmm.mmmmmmmmmmmm..mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.mmmmmmmmmmmmmm.......mmmmmmmmmmmmmmm..mmmmmmmm
+ mmmmmmmmmmmmmmmmm.mmmmmmmmmm...mmmmmmmmmmmmmmmmmmmmmmmm.mmmmmmmmmmmmmmmmmmmmmmmm
+ mmmmmmmmm.mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+ mmmmmmmmmmmmmmmmmmmmmmmmmmmmm.mmmmmmmmmmmm.........mmm...mmmmmmmmmmmmmm.rrr___rr
+ rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_____rrrrrrrrrrrrrrrrrrrrrr_rrrrrrrrr
+ r_rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ 
+2025-10-16 21:49:08 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrrrrrrrrrmmm....mmm..m..mmmmmcccc.........crr__rriicccmmmmmmmiii
+2025-10-16 21:50:18 /Users/jacobmilham/Programing/game project/platformer.p8
+ rrrrrrrrrrrrrrrr_rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ rrrrrrrrrrrrrrrrrrrrrrrrrrrr____rrrrrrrrrrrrrrrrrrrrrrrrrrrrr__rrrrrrrrrrrrrrrrr
+ rrrrrrrrrrrrrrr___rrrr_rrr_________rrrr__rrr__rrrr_________rrrrrrrrrr_________rg
+ mmmmmrrrrrrrrrrrrrrrrrrrrr_mmmmccccrcc.........cmmmmrrrrrrrrrrrrr_rrr_rrrrrrrrrr
+ rrrrrrrrrrrmmmmmmmmmmmm..mmmmmmmmmmmmmrrrrr_rrrrmmmmmmmmcc.gmmmmmmm..m....mm...m
+ mm.mcc.....mmmmmmm.rrrrrrrrrrrrrrrrrrrrrrrrm.mmmmmm.........i.........iirrrrrrrr
+ rrrrrrrrrrrrrr_rrrrrr_r__rrrrrrrrrrrrrrrrrrrrrrrrrrr_rrrrrrrrrrrrrrrrrrrrrrrrrrr
+ rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_rrrrrrrrrrrrrrrrrrrrrrrr__rrrrrr_rrrr
+ rrrrrrrr_rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr__rrrrrrrrrrrr______rr__rrrrrrrrrrr__r
+ rrrrrrrrr__rrrrrrrrrrrr___rrrrrrrrrrrrr__rrrr___rrrrrr___rrrrr__rrrrrr__rrrrrrr_
+ rrrrrrrrrrr______rrrrrrrrrrrrrrrrrrrrr_rmmmm.mm...mmmmmrrrrrrrrrrrrrrrr__rrrrrrr
+ rrrrr_________mmg.gggi.........rrrr
