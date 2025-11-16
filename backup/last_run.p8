@@ -7,23 +7,23 @@ function _init()
     menu_frame_rate = 10
     current_menu_frame = 0
     main_menu = true
-    creddits = false
+    credits = false
+    
     screen_size = 128
     players = {}
     eggs = {}
     add(players,make_player(0,0))
-    --add_new_player()
 
     --I just don't wanna listen to ts
-    --music(0,0,12)
+   --music(0,0,12)
 
-    menu = make_menu({"sTART","cREDDITS"}, {exit_start_menu,toggle_creddits},36,72)
+    menu = make_menu({"sTART","cREDITS"}, {exit_start_menu,toggle_credits},36,72)
     selected_menu_item = 1
     toggle_hover_menu_item(menu,selected_menu_item)
 end
 
 function _update()
-    if main_menu or creddits then
+    if main_menu or credits then
         if btnp(⬇️) then
             toggle_hover_menu_item(menu,selected_menu_item)
             if (selected_menu_item<#menu) selected_menu_item+=1
@@ -57,12 +57,12 @@ function _draw()
         draw_spotlight(64,40,0,8,0) --background for main menu
         sspr(8,0,8,8,32,4,64,64)
         show_menu(menu)
-    elseif creddits then
+    elseif credits then
         if menu_frame_rate == current_menu_frame then --so the animations are a bit less chopy
             current_menu_frame = 0
             cls()
-            draw_creddits_background()
-            show_creddits()
+            draw_credits_background()
+            show_credits()
         else
             current_menu_frame += 1
         end
@@ -180,7 +180,6 @@ function draw_character(self,draw_map)
             camera(self.cam.x, self.cam.y)
             mapdraw(1,0,0,0,self.map_width,self.map_height)
             sspr(0,32,40,16,0,9,164,64) --title card
-
             sspr(8,0,8,8,64,32,32)
         end
         pal(3,3+player_num)
@@ -190,9 +189,6 @@ function draw_character(self,draw_map)
             update_sprite(self)
         end
         self.update_animations = not self.update_animations
-    else
-        print("eVERYONE IS DEAD",self.cam.x,self.cam.y,8)
-        
     end
 end
 
@@ -271,7 +267,21 @@ function handle_map_collision(self, is_player)
     end
     if is_player then 
         if collide_map(self,"down",2) or collide_map(self,"right",2) or collide_map(self,"left",2)then
-            self.alive = false
+            sfx(7)
+            current_time = time()
+            resume_time = time() + 1
+            print("you died",50,0)
+            local temp_players = {}
+            for i=1,#players do
+                add(temp_players,make_player(players[i].player_num,players[i].level))
+            end
+            while resume_time>current_time do
+                current_time = time()
+                print(current_time)
+                cls()
+                flip()
+            end
+            players = temp_players
         elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
             sfx(0)
             self.bread_collected += 1
@@ -285,7 +295,7 @@ function handle_map_collision(self, is_player)
             end
             players = temp_players
             if self.level >=3 then 
-                creddits = true
+                credits = true
                 current_menu_frame = menu_frame_rate
                 reset() -- some graphics memory magic makes this necisarry... Its out of my knowledge level either way :,(
             end
@@ -362,7 +372,7 @@ end
 function update_player(self)
     if self.alive then
         --jump 
-        if self.can_jump and (btn(❎,self.player_num) or btn(⬆️,self.player_num)) then
+        if self.can_jump and btn(❎,self.player_num) then
             jump(self)
         else
             if self.dy>0 then
@@ -474,7 +484,7 @@ function draw_spotlight(center_x,center_y,outer_color,middle_color,inner_color, 
     circfill(center_x,center_y,radius - radius*.875,inner_color)
 end
 
-function draw_creddits_background()
+function draw_credits_background()
     --displays a checkerboard of duck man, egg child, peppermint, and bread
     possible_sprites = {1,6,9,11} -- 4 total sprites makes it easier since screen is 8x8 sprites
     alternate_row = false
@@ -557,8 +567,8 @@ function exit_start_menu()
 end
 
 -->8
---show creddits 
-function show_creddits()
+--show credits 
+function show_credits()
     --just to make it possible to escape this screen
     selected_menu_item = 1
     menu = make_menu({"sTART MENU"}, {_init}) --this will be invisible but still interactable
@@ -580,8 +590,8 @@ function show_creddits()
     
 end
 
-function toggle_creddits()
-    creddits = not creddits
+function toggle_credits()
+    credits = not credits
     main_menu = not main_menu
 end
 -->8
@@ -767,7 +777,7 @@ bf280000100301003210032100351003010032100321003510030100321003210035100351003510
 bf2800002612526125261252412523125231252312524125261252612526125241252612026122261222612227125241252712027122261252412526120261222712027122281202812224120241222412224122
 bf2800211003010032100321003510030100321003210035100301003210032100351003510035100301003211030110321103211032100301003210032100321103011032110301103210030100321003210032
 bf2800000c0300c0320c0320c0350c0300c0320c0320c0350c0300c0320c0320c0350c0350c0350c0300c0320d0300d0320d0320d0320c0300c0320c0320c0320d0300d0320d0300d0320c0300c0320c0320c032
-001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+c210000003150031500315003150031500415009150101500f150121500e1500a1500915008150081500815008150081500715001150011500015000150001500015000150001500015000150001500015000150
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
