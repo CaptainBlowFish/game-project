@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 579 // number of times program has been run
+[000000]     11 sessions 585 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -54,50 +54,49 @@
 [000000]     49 accept_future 0
 [000000]   
 [000000]   codo_system_init
-[000836]   Compiled against SDL version: 2.28.5
-[000836]   Linked against SDL version:   2.28.5
-[000836]   Current video driver: cocoa
-[000836]   codo_reset_timer
-[000836]   codo_gui_init
-[000836]   codo_keys_init
-[000836]   codo_text_init
-[000836]   codo_video_init
-[000836]   codo_mouse_init
-[000836]   codo_joystick_init
-[000837]   Reading controller mappings: /Users/jacobmilham/Programing/Duckman/sdl_controllers.txt
-[000838]   searching for joysticks
-[000838]     found 0 joysticks
-[000838]   ok
-[000838] ok
-[000846] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[000848] codo_set_screen 128 128 8 100
-[000848]  window size: 640 540
-[000905]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000845]   Compiled against SDL version: 2.28.5
+[000845]   Linked against SDL version:   2.28.5
+[000845]   Current video driver: cocoa
+[000845]   codo_reset_timer
+[000845]   codo_gui_init
+[000845]   codo_keys_init
+[000845]   codo_text_init
+[000845]   codo_video_init
+[000845]   codo_mouse_init
+[000845]   codo_joystick_init
+[000845]   Reading controller mappings: /Users/jacobmilham/Programing/Duckman/sdl_controllers.txt
+[000846]   searching for joysticks
+[000846]     found 0 joysticks
+[000846]   ok
+[000846] ok
+[000857] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000859] codo_set_screen 128 128 8 100
+[000859]  window size: 640 540
+[000926]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[000906]  desktop size: 1440 900
-[000906] ok
-[000912] codo_sound_init mix_buffer_size: 1024
-[000912] codo_sound_init
-[000912] SDL_INIT_AUDIO ok
-[000949] SDL_OpenAudio ok
-[000949]  freq:22050
+[000928]  desktop size: 1440 900
+[000928] ok
+[000935] codo_sound_init mix_buffer_size: 1024
+[000935] codo_sound_init
+[000935] SDL_INIT_AUDIO ok
+[000984] SDL_OpenAudio ok
+[000984]  freq:22050
  channels:1
-[000949] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[000949] Current audio driver: coreaudio
-[003001] loading /Users/jacobmilham/Programing/Duckman/platformer.p8
-[004681] run_cart current_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_cart_lid: 
-[397749] codo_exit
-[397749]   cmusic_stop
-[397749]   codo_main_exit
-[397750]   codo_config_save
-[397751]   codo_sound_exit
-[397751]   codo_video_exit
-[397768]   codo_joystick_exit
-[397768]   codo_system_exit
-[397768]   codo_items_created: 1303
-[397768] ok
-s_created: 1303
-[016516] ok
+[000984] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000984] Current audio driver: coreaudio
+[003046] loading /Users/jacobmilham/Programing/Duckman/platformer.p8
+[004726] run_cart current_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_cart_lid: 
+[511875] window closed (14)
+[511877] codo_exit
+[511877]   cmusic_stop
+[511877]   codo_main_exit
+[511879]   codo_config_save
+[511879]   codo_sound_exit
+[511879]   codo_video_exit
+[511888]   codo_joystick_exit
+[511889]   codo_system_exit
+[511889]   codo_items_created: 1303
+[511889] ok

@@ -88,7 +88,9 @@ function make_player(player_num,level,x,y)
         y = y or 60+ (level or 0) *screen_size,--top
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
-        max_dx = 2,
+        running = false,
+        max_running_dx = 2,
+        max_walking_dx = .5,
         max_dy = 10,
         current_jump_height = 0, --Will increase as the player jumps 
         max_jump_height = 26,
@@ -125,7 +127,9 @@ function make_non_hostile(egg,x,y)
         y = y or 80,--top
         dx = 0,--movement on the x axis
         dy = 1, --movement on the y axis
-        max_dx = .09,
+        running = false,
+        max_running_dx = 2,
+        max_walking_dx = 1,
         max_dy = 16,
         current_jump_height = 0, --Will increase as the player jumps 
         max_jump_height = 36,
@@ -212,17 +216,25 @@ end
 -->8
 --movement
 function move(self, left)
-    --has the player move left or right
+    -- Changes the character's movement state
     if left then
         self.facing_left = true
     else
         self.facing_left = false
     end
     self.dx += .1
-    if self.dx > self.max_dx then
-        self.dx = self.max_dx
-    end
 
+    if self.running then
+        if self.dx > self.max_running_dx then
+            self.dx = self.max_running_dx
+        end
+    else
+        if self.dx > self.max_running_dx then
+            self.dx = self.max_running_dx - .2
+        elseif self.dx > self.max_walking_dx then
+            self.dx -=.2
+        end
+    end
 end
 
 function jump(self)
@@ -268,18 +280,9 @@ function handle_map_collision(self, is_player)
     if is_player then 
         if collide_map(self,"down",2) or collide_map(self,"right",2) or collide_map(self,"left",2)then
             sfx(7)
-            current_time = time()
-            resume_time = time() + 1
-            print("you died",50,0)
             local temp_players = {}
             for i=1,#players do
                 add(temp_players,make_player(players[i].player_num,players[i].level))
-            end
-            while resume_time>current_time do
-                current_time = time()
-                print(current_time)
-                cls()
-                flip()
             end
             players = temp_players
         elseif collide_map(self,"up",3,true) or collide_map(self,"down",3,true) or collide_map(self,"left",3,true) or collide_map(self,"right",3,true) then 
@@ -305,6 +308,71 @@ function handle_map_collision(self, is_player)
 end
 
 function collide_map(self,aim,flag,collectable)
+    --self = table needs x,y,w,h
+    --aim = left,right,up,down
+    local collides = false
+    local x=self.x  
+    local y=self.y
+    local w=8  
+    local h=8
+    local x1=0	 
+    local y1=0
+    local x2=0  
+    local y2=0
+    collectable = collectable or false
+
+    if aim=="left" then
+        x1=x-1  
+        y1=y
+        x2=x    
+        y2=y+h-1
+    elseif aim=="right" then
+        x1=x+w-1    
+        y1=y
+        x2=x+w  
+        y2=y+h-1
+    elseif aim=="up" then
+        x1=x+2    
+        y1=y-1
+        x2=x+w-3  
+        y2=y
+    elseif aim=="down" then
+        x1=x    
+        y1=y+h
+        x2=x+w-1    
+        y2=y+h
+    end
+
+    --pixels to tiles
+    x1/=8    
+    y1/=8
+    x2/=8    
+    y2/=8
+
+    --This makes it work MAKE IT LESS UGLY LATER
+    x1+=1
+    x2+=1
+    if fget(mget(x1,y1), flag) then 
+        collides = true
+        if (collectable) mset(x1,y1,0)
+    end
+    if fget(mget(x1,y2), flag) then
+        collides = true
+        if (collectable) mset(x1,y2,0)
+    end
+    if fget(mget(x2,y1), flag) then
+        collides = true
+        if (collectable) mset(x2,y1,0)
+    end
+    if fget(mget(x2,y2), flag) then
+        collides = true
+        if (collectable) mset(x2,y2,0)
+    end
+
+    return collides
+end
+
+function collide_map_harmful_things(self,aim,flag,collectable)
     --self = table needs x,y,w,h
     --aim = left,right,up,down
     local collides = false
@@ -397,9 +465,12 @@ function update_player(self)
             self.y += self.dy
         end
 
-
+        if btn(🅾️,self.player_num) then
+            self.running = true
+        else
+            self.running = false
+        end
         if btn(⬅️,self.player_num) then
-            
             move(self, true)
 
         elseif btn(➡️,self.player_num) then
@@ -654,13 +725,13 @@ __gfx__
 77777760776676776076776760000000000076000067776000000000000000000000000000552525895550000000000000000000000000000000000000000000
 77776600777760077760770676000000000060000007776000000000000000000000000000552555895255000000000000000000000000000000000000000000
 00000000660000000000000000000000000000007777777776000000000000000000000005555525598555500000000000000000000000000000000000000000
-66660000776000000000000000000000000000007777777776000000000000000000000005555225598552500000000000000000000000000000000000000000
-77776600777600000000000000000000000000006777777760000000000000000000000005255555598552550000000000000000000000000000000000000000
-77777766777760000000000000000000000000000677777600000000000000000000000055555552598555555000000000000000000000000000000000000000
-77777777777776000000000000000000000000000067776000000000000000000000000055552522589552555000000000000000000000000000000000000000
-77777777777777600000000000000000000000000006760000000000000000000000005552552555589555525500000000000000000000000000000000000000
-77777777777776000000000000000000000000000000600000000000000000000000005555555552588955555550000000000000000000000000000000000000
-77777760777760000000000000000000000000000000000000000000000000000000055555225555588955525555000000000000000000000000000000000000
+66660000776000000077700000000000000000007777777776000000000000000000000005555225598552500000000000000000000000000000000000000000
+77776600777600000077700000000000000000006777777760000000000000000000000005255555598552550000000000000000000000000000000000000000
+77777766777760000007000000000000000000000677777600000000000000000000000055555552598555555000000000000000000000000000000000000000
+77777777777776000007000000000000000000000067776000000000000000000000000055552522589552555000000000000000000000000000000000000000
+77777777777777600007770000000000000000000006760000000000000000000000005552552555589555525500000000000000000000000000000000000000
+77777777777776000777070000000000000000000000600000000000000000000000005555555552588955555550000000000000000000000000000000000000
+77777760777760000000070000000000000000000000000000000000000000000000055555225555588955525555000000000000000000000000000000000000
 77776000777600000000000000000000000000000000000000000000000000000000555555555555558895522555500000000000000000000000000000000000
 00000000776000000000000000000000000000000000000000000000000000000005555555555555559895555555500000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000055552555525222555889555252500000000000000000000000000000000000

@@ -1570,3 +1570,25 @@
  
 2025-11-16 22:11:07 /Users/jacobmilham/Programing/Duckman/platformer.p8
  rrrrrrriiiiiiiii.........rrrrr_________r_________rrrrrr_________rrrrc.........rrrcc.........rrrrc.........rrrrr_________rrrrriii.........
+2025-11-18 19:18:39 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrrrrrrrrrrrrrrrrrrrc.........
+2025-11-18 19:31:16 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrrric
+2025-11-18 19:36:07 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrriii
+2025-11-18 19:37:00 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrri..ccccc.........c
+2025-11-18 19:39:03 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrriii...i......iii.........
+2025-11-18 19:40:57 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrrrrrrrrrrrrrrrrrrrrrrr__rrrrrrrrrrrrr__cgggggggggggggggggggggggggggggggggggggg
+ gggggggggggggggggggg.........ggggggggggggggggggggggggggggggc
+2025-11-18 19:54:28 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ 
+2025-11-18 19:56:51 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ 
+2025-11-18 20:00:23 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ 
+2025-11-18 20:09:43 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ r________rrrr_________rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_________rrrrrrrrr_________r_________rrrrrrrrrrrrrrrr__r_________rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_________rrrr
+ rrrrrrrrr______rr_________r
