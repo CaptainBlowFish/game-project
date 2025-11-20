@@ -278,7 +278,7 @@ function handle_map_collision(self, is_player)
         self.dx = 0
     end
     if is_player then 
-        if collide_map(self,"down",2) or collide_map(self,"right",2) or collide_map(self,"left",2)then
+        if collide_map_harmful_things(self,"down",2) or collide_map_harmful_things(self,"right",2) or collide_map_harmful_things(self,"left",2) then
             sfx(7)
             local temp_players = {}
             for i=1,#players do

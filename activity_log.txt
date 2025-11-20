@@ -1592,3 +1592,9 @@
 2025-11-18 20:09:43 /Users/jacobmilham/Programing/Duckman/platformer.p8
  r________rrrr_________rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_________rrrrrrrrr_________r_________rrrrrrrrrrrrrrrr__r_________rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_________rrrr
  rrrrrrrrr______rr_________r
+2025-11-20 20:26:44 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ r___r_rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr_rrrrrrr
+ rrrrrrrrrrrrrrrci.iirrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ rriir________rr
+2025-11-20 20:35:36 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rr_____i
