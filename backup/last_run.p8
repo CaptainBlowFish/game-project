@@ -56,7 +56,8 @@ function _draw()
         cls()
         draw_spotlight(64,40,0,8,0) --background for main menu
         sspr(8,0,8,8,32,4,64,64)
-        show_menu(menu)
+        --show_menu(menu)
+        print("  \t\#0 \^w\^t\^o801mR dUCK mAN",0,84,7)
     elseif credits then
         if menu_frame_rate == current_menu_frame then --so the animations are a bit less chopy
             current_menu_frame = 0

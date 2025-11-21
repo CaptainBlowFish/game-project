@@ -1598,3 +1598,13 @@
  rriir________rr
 2025-11-20 20:35:36 /Users/jacobmilham/Programing/Duckman/platformer.p8
  rr_____i
+2025-11-20 20:36:57 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ r_______ii...ccccccccccr_cccc.........
+2025-11-20 20:40:20 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ 
+2025-11-20 20:41:39 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ rrcc.........cgg..
+2025-11-20 20:42:02 /Users/jacobmilham/Programing/Duckman/platformer.p8
+ r_____r__rr_rr____rrrriiiiiiiiii.i.riii..iii........iiii
+2025-11-20 20:45:14 /Users/jacobmilham/Programing/Duckman/carts/duckman.p8
+ rr_________ii.........cc.cc..ccccccciiiii.........iii.iiii..iiiiii.........

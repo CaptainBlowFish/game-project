@@ -13,7 +13,7 @@
 [000000]     08 blit_method 0  // 0 auto  1 software (slower but sometimes more reliable)  2 hardware (can do filtered scaling) 
 [000000]     09 foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to conserve battery power
 [000000]     10 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
-[000000]     11 sessions 587 // number of times program has been run
+[000000]     11 sessions 589 // number of times program has been run
 [000000]     12 rmb_key 0 // 0 for none  226 for LALT
 [000000]     13 desktop_path 
 [000000]     14 read_controllers_in_background 0
@@ -54,49 +54,71 @@
 [000000]     49 accept_future 0
 [000000]   
 [000000]   codo_system_init
-[001194]   Compiled against SDL version: 2.28.5
-[001194]   Linked against SDL version:   2.28.5
-[001194]   Current video driver: cocoa
-[001194]   codo_reset_timer
-[001194]   codo_gui_init
-[001194]   codo_keys_init
-[001194]   codo_text_init
-[001195]   codo_video_init
-[001195]   codo_mouse_init
-[001195]   codo_joystick_init
-[001196]   Reading controller mappings: /Users/jacobmilham/Programing/Duckman/sdl_controllers.txt
-[001196]   searching for joysticks
-[001196]     found 0 joysticks
-[001196]   ok
-[001196] ok
-[001206] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
-[001208] codo_set_screen 128 128 8 100
-[001208]  window size: 640 540
-[001357]   setting filter to nearest (screen_mode 0  back page width: 128)
+[000810]   Compiled against SDL version: 2.28.5
+[000810]   Linked against SDL version:   2.28.5
+[000810]   Current video driver: cocoa
+[000810]   codo_reset_timer
+[000810]   codo_gui_init
+[000810]   codo_keys_init
+[000810]   codo_text_init
+[000811]   codo_video_init
+[000811]   codo_mouse_init
+[000811]   codo_joystick_init
+[000811]   Reading controller mappings: /Users/jacobmilham/Programing/Duckman/sdl_controllers.txt
+[000812]   searching for joysticks
+[000812]     found 0 joysticks
+[000812]   ok
+[000812] ok
+[000821] codo_load_pod: /Applications/PICO-8.app/Contents/MacOS/pico8.dat ok 
+[000823] codo_set_screen 128 128 8 100
+[000823]  window size: 640 540
+[000880]   setting filter to nearest (screen_mode 0  back page width: 128)
   renderer metal:
    flags: 0x0000000E ( |  | )
    texture formats (6): ARGB8888, ABGR8888, YV12, IYUV, 0x3231564e, 0x3132564e
    max texture size: 16384x16384
-[001361]  desktop size: 1440 900
-[001361] ok
-[001372] codo_sound_init mix_buffer_size: 1024
-[001372] codo_sound_init
-[001372] SDL_INIT_AUDIO ok
-[001496] SDL_OpenAudio ok
-[001496]  freq:22050
+[000882]  desktop size: 1440 900
+[000882] ok
+[000890] codo_sound_init mix_buffer_size: 1024
+[000890] codo_sound_init
+[000890] SDL_INIT_AUDIO ok
+[000940] SDL_OpenAudio ok
+[000940]  freq:22050
  channels:1
-[001496] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
-[001496] Current audio driver: coreaudio
-[003619] loading /Users/jacobmilham/Programing/Duckman/platformer.p8
-[005299] run_cart current_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_cart_lid: 
-[028193] window closed (14)
-[028195] codo_exit
-[028195]   cmusic_stop
-[028195]   codo_main_exit
-[028196]   codo_config_save
-[028197]   codo_sound_exit
-[028197]   codo_video_exit
-[028210]   codo_joystick_exit
-[028211]   codo_system_exit
-[028211]   codo_items_created: 1304
-[028211] ok
+[000940] Built-in audio drivers: 0 coreaudio 1 disk 2 dummy
+[000940] Current audio driver: coreaudio
+[002992] loading /Users/jacobmilham/Programing/Duckman/platformer.p8
+[004694] run_cart current_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_filename: /Users/jacobmilham/Programing/Duckman/platformer.p8 running_cart_lid: 
+[3071341] codo_exit
+[3071342]   cmusic_stop
+[3071342]   codo_main_exit
+[3071346]   codo_config_save
+[3071349]   codo_sound_exit
+[3071349]   codo_video_exit
+[3071359]   codo_joystick_exit
+[3071359]   codo_system_exit
+[3071362]   codo_items_created: 1302
+[3071362] ok
+9] codo_save_png result: 0  file: /Users/jacobmilham/Programing/Duckman/_label.png
+[083079]  ok_
+[083079] 2. writing /Users/jacobmilham/Programing/Duckman/carts/duckman.js
+[187083] launch: [open "/Users/jacobmilham/Programing/Duckman/carts/"] result: 0
+[282635] exporting html: duckman.html 1 1
+[282642] 1. export html
+[282642] 1.a opening output: /Users/jacobmilham/Programing/Duckman/carts/duckman.html
+[282643] 1.b replacements
+[282643]  ok_
+[282652] codo_save_png result: 0  file: /Users/jacobmilham/Programing/Duckman/_label.png
+[282652]  ok_
+[282652] 2. writing /Users/jacobmilham/Programing/Duckman/carts/duckman.js
+[392728] codo_save_png result: 0  file: /Users/jacobmilham/Programing/Duckman/carts/duckman.p8.png
+[3056141] codo_exit
+[3056142]   cmusic_stop
+[3056142]   codo_main_exit
+[3056146]   codo_config_save
+[3056146]   codo_sound_exit
+[3056146]   codo_video_exit
+[3056155]   codo_joystick_exit
+[3056155]   codo_system_exit
+[3056166]   codo_items_created: 1306
+[3056166] ok
